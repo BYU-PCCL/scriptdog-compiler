@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+from scriptdog_compiler.compile import compile_file, validate_program
+import sys
+import pickle
+
+# double check arguments
+if len(sys.argv) != 3:
+    print("usage: compile.py scriptdog_program output_pickle_filename")
+    sys.exit(0)
+
+# get program filenames
+program_filename = sys.argv[1]
+compiled_filename = sys.argv[2]
+
+# compile and validate
+p = compile_file(program_filename)
+validate_program(p)
+
+# save file
+output_file = open(compiled_filename, "wb")
+pickle.dump(p, output_file)
