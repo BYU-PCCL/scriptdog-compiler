@@ -7,136 +7,153 @@ import sys
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\62")
-        buf.write("\u0128\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\65")
+        buf.write("\u0146\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
-        buf.write("\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36")
-        buf.write("\3\2\3\2\7\2?\n\2\f\2\16\2B\13\2\3\3\3\3\3\3\5\3G\n\3")
-        buf.write("\3\3\3\3\3\3\3\3\3\3\3\4\3\4\5\4P\n\4\3\4\3\4\3\4\3\4")
-        buf.write("\3\4\3\4\3\5\7\5Y\n\5\f\5\16\5\\\13\5\3\6\7\6_\n\6\f\6")
-        buf.write("\16\6b\13\6\3\7\3\7\3\7\3\7\3\7\3\7\3\7\5\7k\n\7\3\b\3")
+        buf.write("\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\3\2\3\2")
+        buf.write("\3\2\7\2>\n\2\f\2\16\2A\13\2\3\2\3\2\3\3\3\3\3\3\3\3\5")
+        buf.write("\3I\n\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\5\4T\n\4\3")
+        buf.write("\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\5\7\5`\n\5\f\5\16")
+        buf.write("\5c\13\5\3\6\7\6f\n\6\f\6\16\6i\13\6\3\7\3\7\3\7\3\7\3")
+        buf.write("\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\5\7z\n\7\3")
         buf.write("\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b")
         buf.write("\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3")
-        buf.write("\b\5\b\u008a\n\b\3\t\6\t\u008d\n\t\r\t\16\t\u008e\3\n")
-        buf.write("\3\n\3\n\3\n\3\n\5\n\u0096\n\n\3\13\3\13\3\f\3\f\5\f\u009c")
-        buf.write("\n\f\3\r\3\r\5\r\u00a0\n\r\3\16\3\16\3\16\3\16\5\16\u00a6")
-        buf.write("\n\16\3\17\3\17\3\17\3\17\5\17\u00ac\n\17\3\20\5\20\u00af")
-        buf.write("\n\20\3\20\3\20\3\20\5\20\u00b4\n\20\3\20\3\20\3\21\5")
-        buf.write("\21\u00b9\n\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\22")
-        buf.write("\5\22\u00c3\n\22\3\22\3\22\3\22\5\22\u00c8\n\22\3\22\3")
-        buf.write("\22\3\23\5\23\u00cd\n\23\3\23\3\23\3\23\3\23\3\23\3\24")
-        buf.write("\5\24\u00d5\n\24\3\24\3\24\3\24\3\24\3\24\3\24\3\24\3")
-        buf.write("\25\5\25\u00df\n\25\3\25\3\25\3\25\3\25\3\26\5\26\u00e6")
-        buf.write("\n\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26")
-        buf.write("\5\26\u00f2\n\26\3\26\5\26\u00f5\n\26\3\27\6\27\u00f8")
-        buf.write("\n\27\r\27\16\27\u00f9\3\30\3\30\3\30\3\30\3\30\3\30\3")
-        buf.write("\30\3\30\3\30\3\30\3\31\3\31\3\31\3\31\3\31\3\31\3\31")
-        buf.write("\3\32\6\32\u010e\n\32\r\32\16\32\u010f\3\33\3\33\3\33")
-        buf.write("\3\33\6\33\u0116\n\33\r\33\16\33\u0117\3\34\3\34\3\34")
-        buf.write("\3\34\3\35\3\35\3\35\3\35\6\35\u0122\n\35\r\35\16\35\u0123")
-        buf.write("\3\36\3\36\3\36\2\2\37\2\4\6\b\n\f\16\20\22\24\26\30\32")
-        buf.write("\34\36 \"$&(*,.\60\62\64\668:\2\2\2\u0138\2@\3\2\2\2\4")
-        buf.write("C\3\2\2\2\6M\3\2\2\2\bZ\3\2\2\2\n`\3\2\2\2\fj\3\2\2\2")
-        buf.write("\16\u0089\3\2\2\2\20\u008c\3\2\2\2\22\u0095\3\2\2\2\24")
-        buf.write("\u0097\3\2\2\2\26\u0099\3\2\2\2\30\u009d\3\2\2\2\32\u00a1")
-        buf.write("\3\2\2\2\34\u00a7\3\2\2\2\36\u00ae\3\2\2\2 \u00b8\3\2")
-        buf.write("\2\2\"\u00c2\3\2\2\2$\u00cc\3\2\2\2&\u00d4\3\2\2\2(\u00de")
-        buf.write("\3\2\2\2*\u00e5\3\2\2\2,\u00f7\3\2\2\2.\u00fb\3\2\2\2")
-        buf.write("\60\u0105\3\2\2\2\62\u010d\3\2\2\2\64\u0115\3\2\2\2\66")
-        buf.write("\u0119\3\2\2\28\u0121\3\2\2\2:\u0125\3\2\2\2<?\5\4\3\2")
-        buf.write("=?\5\6\4\2><\3\2\2\2>=\3\2\2\2?B\3\2\2\2@>\3\2\2\2@A\3")
-        buf.write("\2\2\2A\3\3\2\2\2B@\3\2\2\2CD\7\22\2\2DF\7)\2\2EG\5\62")
-        buf.write("\32\2FE\3\2\2\2FG\3\2\2\2GH\3\2\2\2HI\7\23\2\2IJ\7\26")
-        buf.write("\2\2JK\5\b\5\2KL\7\27\2\2L\5\3\2\2\2MO\7\30\2\2NP\7\6")
-        buf.write("\2\2ON\3\2\2\2OP\3\2\2\2PQ\3\2\2\2QR\7)\2\2RS\7\31\2\2")
-        buf.write("ST\7\26\2\2TU\5\n\6\2UV\7\27\2\2V\7\3\2\2\2WY\5\f\7\2")
-        buf.write("XW\3\2\2\2Y\\\3\2\2\2ZX\3\2\2\2Z[\3\2\2\2[\t\3\2\2\2\\")
-        buf.write("Z\3\2\2\2]_\5\16\b\2^]\3\2\2\2_b\3\2\2\2`^\3\2\2\2`a\3")
-        buf.write("\2\2\2a\13\3\2\2\2b`\3\2\2\2ck\5 \21\2dk\5\"\22\2ek\5")
-        buf.write("$\23\2fk\5&\24\2gk\5*\26\2hk\5(\25\2ik\5\36\20\2jc\3\2")
-        buf.write("\2\2jd\3\2\2\2je\3\2\2\2jf\3\2\2\2jg\3\2\2\2jh\3\2\2\2")
-        buf.write("ji\3\2\2\2k\r\3\2\2\2lm\7\30\2\2mn\5\20\t\2no\7\31\2\2")
-        buf.write("o\u008a\3\2\2\2pq\7\30\2\2qr\5\20\t\2rs\7\31\2\2st\7\26")
-        buf.write("\2\2tu\5\b\5\2uv\7\27\2\2v\u008a\3\2\2\2wx\7\30\2\2xy")
-        buf.write("\5\20\t\2yz\7\31\2\2z{\7\3\2\2{|\5\36\20\2|\u008a\3\2")
-        buf.write("\2\2}~\7\30\2\2~\177\7\16\2\2\177\u0080\7\31\2\2\u0080")
-        buf.write("\u0081\7\3\2\2\u0081\u008a\5\36\20\2\u0082\u0083\7\30")
-        buf.write("\2\2\u0083\u0084\7\16\2\2\u0084\u0085\7\31\2\2\u0085\u0086")
-        buf.write("\7\26\2\2\u0086\u0087\5\b\5\2\u0087\u0088\7\27\2\2\u0088")
-        buf.write("\u008a\3\2\2\2\u0089l\3\2\2\2\u0089p\3\2\2\2\u0089w\3")
-        buf.write("\2\2\2\u0089}\3\2\2\2\u0089\u0082\3\2\2\2\u008a\17\3\2")
-        buf.write("\2\2\u008b\u008d\5\22\n\2\u008c\u008b\3\2\2\2\u008d\u008e")
-        buf.write("\3\2\2\2\u008e\u008c\3\2\2\2\u008e\u008f\3\2\2\2\u008f")
-        buf.write("\21\3\2\2\2\u0090\u0096\5\24\13\2\u0091\u0096\5\26\f\2")
-        buf.write("\u0092\u0096\5\30\r\2\u0093\u0096\5\32\16\2\u0094\u0096")
-        buf.write("\5\34\17\2\u0095\u0090\3\2\2\2\u0095\u0091\3\2\2\2\u0095")
-        buf.write("\u0092\3\2\2\2\u0095\u0093\3\2\2\2\u0095\u0094\3\2\2\2")
-        buf.write("\u0096\23\3\2\2\2\u0097\u0098\7\16\2\2\u0098\25\3\2\2")
-        buf.write("\2\u0099\u009b\7)\2\2\u009a\u009c\7\4\2\2\u009b\u009a")
-        buf.write("\3\2\2\2\u009b\u009c\3\2\2\2\u009c\27\3\2\2\2\u009d\u009f")
-        buf.write("\7-\2\2\u009e\u00a0\7\4\2\2\u009f\u009e\3\2\2\2\u009f")
-        buf.write("\u00a0\3\2\2\2\u00a0\31\3\2\2\2\u00a1\u00a2\7)\2\2\u00a2")
-        buf.write("\u00a3\7\32\2\2\u00a3\u00a5\7)\2\2\u00a4\u00a6\7\4\2\2")
-        buf.write("\u00a5\u00a4\3\2\2\2\u00a5\u00a6\3\2\2\2\u00a6\33\3\2")
-        buf.write("\2\2\u00a7\u00a8\7\26\2\2\u00a8\u00a9\7)\2\2\u00a9\u00ab")
-        buf.write("\7\27\2\2\u00aa\u00ac\7\4\2\2\u00ab\u00aa\3\2\2\2\u00ab")
-        buf.write("\u00ac\3\2\2\2\u00ac\35\3\2\2\2\u00ad\u00af\7*\2\2\u00ae")
-        buf.write("\u00ad\3\2\2\2\u00ae\u00af\3\2\2\2\u00af\u00b0\3\2\2\2")
-        buf.write("\u00b0\u00b1\7\22\2\2\u00b1\u00b3\7)\2\2\u00b2\u00b4\5")
-        buf.write("\64\33\2\u00b3\u00b2\3\2\2\2\u00b3\u00b4\3\2\2\2\u00b4")
-        buf.write("\u00b5\3\2\2\2\u00b5\u00b6\7\23\2\2\u00b6\37\3\2\2\2\u00b7")
-        buf.write("\u00b9\7*\2\2\u00b8\u00b7\3\2\2\2\u00b8\u00b9\3\2\2\2")
-        buf.write("\u00b9\u00ba\3\2\2\2\u00ba\u00bb\7\22\2\2\u00bb\u00bc")
-        buf.write("\7\7\2\2\u00bc\u00bd\7\23\2\2\u00bd\u00be\7\26\2\2\u00be")
-        buf.write("\u00bf\5\n\6\2\u00bf\u00c0\7\27\2\2\u00c0!\3\2\2\2\u00c1")
-        buf.write("\u00c3\7*\2\2\u00c2\u00c1\3\2\2\2\u00c2\u00c3\3\2\2\2")
-        buf.write("\u00c3\u00c4\3\2\2\2\u00c4\u00c5\7\22\2\2\u00c5\u00c7")
-        buf.write("\7\13\2\2\u00c6\u00c8\5\64\33\2\u00c7\u00c6\3\2\2\2\u00c7")
-        buf.write("\u00c8\3\2\2\2\u00c8\u00c9\3\2\2\2\u00c9\u00ca\7\23\2")
-        buf.write("\2\u00ca#\3\2\2\2\u00cb\u00cd\7*\2\2\u00cc\u00cb\3\2\2")
-        buf.write("\2\u00cc\u00cd\3\2\2\2\u00cd\u00ce\3\2\2\2\u00ce\u00cf")
-        buf.write("\7\22\2\2\u00cf\u00d0\7\f\2\2\u00d0\u00d1\7)\2\2\u00d1")
-        buf.write("\u00d2\7\23\2\2\u00d2%\3\2\2\2\u00d3\u00d5\7*\2\2\u00d4")
-        buf.write("\u00d3\3\2\2\2\u00d4\u00d5\3\2\2\2\u00d5\u00d6\3\2\2\2")
-        buf.write("\u00d6\u00d7\7\22\2\2\u00d7\u00d8\7\t\2\2\u00d8\u00d9")
-        buf.write("\7\23\2\2\u00d9\u00da\7\26\2\2\u00da\u00db\5\b\5\2\u00db")
-        buf.write("\u00dc\7\27\2\2\u00dc\'\3\2\2\2\u00dd\u00df\7*\2\2\u00de")
-        buf.write("\u00dd\3\2\2\2\u00de\u00df\3\2\2\2\u00df\u00e0\3\2\2\2")
-        buf.write("\u00e0\u00e1\7\22\2\2\u00e1\u00e2\7\n\2\2\u00e2\u00e3")
-        buf.write("\7\23\2\2\u00e3)\3\2\2\2\u00e4\u00e6\7*\2\2\u00e5\u00e4")
-        buf.write("\3\2\2\2\u00e5\u00e6\3\2\2\2\u00e6\u00e7\3\2\2\2\u00e7")
-        buf.write("\u00e8\7\22\2\2\u00e8\u00e9\7\r\2\2\u00e9\u00ea\7\26\2")
-        buf.write("\2\u00ea\u00eb\7)\2\2\u00eb\u00ec\7\27\2\2\u00ec\u00ed")
-        buf.write("\7\23\2\2\u00ed\u00ee\7\26\2\2\u00ee\u00ef\5\b\5\2\u00ef")
-        buf.write("\u00f1\7\27\2\2\u00f0\u00f2\5,\27\2\u00f1\u00f0\3\2\2")
-        buf.write("\2\u00f1\u00f2\3\2\2\2\u00f2\u00f4\3\2\2\2\u00f3\u00f5")
-        buf.write("\5\60\31\2\u00f4\u00f3\3\2\2\2\u00f4\u00f5\3\2\2\2\u00f5")
-        buf.write("+\3\2\2\2\u00f6\u00f8\5.\30\2\u00f7\u00f6\3\2\2\2\u00f8")
-        buf.write("\u00f9\3\2\2\2\u00f9\u00f7\3\2\2\2\u00f9\u00fa\3\2\2\2")
-        buf.write("\u00fa-\3\2\2\2\u00fb\u00fc\7\22\2\2\u00fc\u00fd\7\17")
-        buf.write("\2\2\u00fd\u00fe\7\26\2\2\u00fe\u00ff\7)\2\2\u00ff\u0100")
-        buf.write("\7\27\2\2\u0100\u0101\7\23\2\2\u0101\u0102\7\26\2\2\u0102")
-        buf.write("\u0103\5\b\5\2\u0103\u0104\7\27\2\2\u0104/\3\2\2\2\u0105")
-        buf.write("\u0106\7\22\2\2\u0106\u0107\7\16\2\2\u0107\u0108\7\23")
-        buf.write("\2\2\u0108\u0109\7\26\2\2\u0109\u010a\5\b\5\2\u010a\u010b")
-        buf.write("\7\27\2\2\u010b\61\3\2\2\2\u010c\u010e\7)\2\2\u010d\u010c")
-        buf.write("\3\2\2\2\u010e\u010f\3\2\2\2\u010f\u010d\3\2\2\2\u010f")
-        buf.write("\u0110\3\2\2\2\u0110\63\3\2\2\2\u0111\u0116\7)\2\2\u0112")
-        buf.write("\u0116\7-\2\2\u0113\u0116\7*\2\2\u0114\u0116\5\66\34\2")
-        buf.write("\u0115\u0111\3\2\2\2\u0115\u0112\3\2\2\2\u0115\u0113\3")
-        buf.write("\2\2\2\u0115\u0114\3\2\2\2\u0116\u0117\3\2\2\2\u0117\u0115")
-        buf.write("\3\2\2\2\u0117\u0118\3\2\2\2\u0118\65\3\2\2\2\u0119\u011a")
-        buf.write("\7\26\2\2\u011a\u011b\58\35\2\u011b\u011c\7\27\2\2\u011c")
-        buf.write("\67\3\2\2\2\u011d\u0122\7)\2\2\u011e\u0122\7-\2\2\u011f")
-        buf.write("\u0122\7*\2\2\u0120\u0122\5\66\34\2\u0121\u011d\3\2\2")
-        buf.write("\2\u0121\u011e\3\2\2\2\u0121\u011f\3\2\2\2\u0121\u0120")
-        buf.write("\3\2\2\2\u0122\u0123\3\2\2\2\u0123\u0121\3\2\2\2\u0123")
-        buf.write("\u0124\3\2\2\2\u01249\3\2\2\2\u0125\u0126\7-\2\2\u0126")
-        buf.write(";\3\2\2\2!>@FOZ`j\u0089\u008e\u0095\u009b\u009f\u00a5")
-        buf.write("\u00ab\u00ae\u00b3\u00b8\u00c2\u00c7\u00cc\u00d4\u00de")
-        buf.write("\u00e5\u00f1\u00f4\u00f9\u010f\u0115\u0117\u0121\u0123")
+        buf.write("\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\5\b\u00a1\n\b\3")
+        buf.write("\t\6\t\u00a4\n\t\r\t\16\t\u00a5\3\n\3\n\3\n\3\n\3\n\5")
+        buf.write("\n\u00ad\n\n\3\13\3\13\3\f\3\f\5\f\u00b3\n\f\3\r\3\r\5")
+        buf.write("\r\u00b7\n\r\3\16\3\16\3\16\3\16\5\16\u00bd\n\16\3\17")
+        buf.write("\3\17\3\17\3\17\5\17\u00c3\n\17\3\20\5\20\u00c6\n\20\3")
+        buf.write("\20\3\20\3\20\5\20\u00cb\n\20\3\20\3\20\3\21\5\21\u00d0")
+        buf.write("\n\21\3\21\3\21\3\21\5\21\u00d5\n\21\3\21\3\21\3\22\5")
+        buf.write("\22\u00da\n\22\3\22\3\22\3\22\3\22\3\22\3\23\5\23\u00e2")
+        buf.write("\n\23\3\23\3\23\5\23\u00e6\n\23\3\24\5\24\u00e9\n\24\3")
+        buf.write("\24\3\24\3\24\3\24\3\24\3\24\3\24\3\25\5\25\u00f3\n\25")
+        buf.write("\3\25\3\25\3\25\3\25\3\25\3\25\3\25\3\26\5\26\u00fd\n")
+        buf.write("\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26\5\26\u0107")
+        buf.write("\n\26\3\26\5\26\u010a\n\26\3\27\6\27\u010d\n\27\r\27\16")
+        buf.write("\27\u010e\3\30\3\30\3\30\3\30\3\30\3\30\3\30\3\30\3\31")
+        buf.write("\3\31\3\31\3\31\3\31\3\31\3\31\3\32\3\32\3\32\7\32\u0123")
+        buf.write("\n\32\f\32\16\32\u0126\13\32\3\33\3\33\3\33\3\33\5\33")
+        buf.write("\u012c\n\33\3\33\3\33\3\33\3\33\3\33\5\33\u0133\n\33\7")
+        buf.write("\33\u0135\n\33\f\33\16\33\u0138\13\33\3\34\3\34\3\34\3")
+        buf.write("\34\3\35\3\35\3\35\3\35\6\35\u0142\n\35\r\35\16\35\u0143")
+        buf.write("\3\35\2\2\36\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"")
+        buf.write("$&(*,.\60\62\64\668\2\2\2\u015c\2?\3\2\2\2\4D\3\2\2\2")
+        buf.write("\6Q\3\2\2\2\ba\3\2\2\2\ng\3\2\2\2\fy\3\2\2\2\16\u00a0")
+        buf.write("\3\2\2\2\20\u00a3\3\2\2\2\22\u00ac\3\2\2\2\24\u00ae\3")
+        buf.write("\2\2\2\26\u00b0\3\2\2\2\30\u00b4\3\2\2\2\32\u00b8\3\2")
+        buf.write("\2\2\34\u00be\3\2\2\2\36\u00c5\3\2\2\2 \u00cf\3\2\2\2")
+        buf.write("\"\u00d9\3\2\2\2$\u00e1\3\2\2\2&\u00e8\3\2\2\2(\u00f2")
+        buf.write("\3\2\2\2*\u00fc\3\2\2\2,\u010c\3\2\2\2.\u0110\3\2\2\2")
+        buf.write("\60\u0118\3\2\2\2\62\u011f\3\2\2\2\64\u012b\3\2\2\2\66")
+        buf.write("\u0139\3\2\2\28\u0141\3\2\2\2:>\7\25\2\2;>\5\4\3\2<>\5")
+        buf.write("\6\4\2=:\3\2\2\2=;\3\2\2\2=<\3\2\2\2>A\3\2\2\2?=\3\2\2")
+        buf.write("\2?@\3\2\2\2@B\3\2\2\2A?\3\2\2\2BC\7\2\2\3C\3\3\2\2\2")
+        buf.write("DE\7\24\2\2EF\7-\2\2FH\7\30\2\2GI\5\62\32\2HG\3\2\2\2")
+        buf.write("HI\3\2\2\2IJ\3\2\2\2JK\7\31\2\2KL\7\3\2\2LM\7\25\2\2M")
+        buf.write("N\7\64\2\2NO\5\b\5\2OP\7\65\2\2P\5\3\2\2\2QS\7\24\2\2")
+        buf.write("RT\7\b\2\2SR\3\2\2\2ST\3\2\2\2TU\3\2\2\2UV\7\34\2\2VW")
+        buf.write("\7-\2\2WX\7\35\2\2XY\7\3\2\2YZ\7\25\2\2Z[\7\64\2\2[\\")
+        buf.write("\5\n\6\2\\]\7\65\2\2]\7\3\2\2\2^`\5\f\7\2_^\3\2\2\2`c")
+        buf.write("\3\2\2\2a_\3\2\2\2ab\3\2\2\2b\t\3\2\2\2ca\3\2\2\2df\5")
+        buf.write("\16\b\2ed\3\2\2\2fi\3\2\2\2ge\3\2\2\2gh\3\2\2\2h\13\3")
+        buf.write("\2\2\2ig\3\2\2\2jz\5&\24\2kz\5(\25\2lz\5*\26\2mn\5 \21")
+        buf.write("\2no\7\25\2\2oz\3\2\2\2pq\5\"\22\2qr\7\25\2\2rz\3\2\2")
+        buf.write("\2st\5$\23\2tu\7\25\2\2uz\3\2\2\2vw\5\36\20\2wx\7\25\2")
+        buf.write("\2xz\3\2\2\2yj\3\2\2\2yk\3\2\2\2yl\3\2\2\2ym\3\2\2\2y")
+        buf.write("p\3\2\2\2ys\3\2\2\2yv\3\2\2\2z\r\3\2\2\2{|\7\34\2\2|}")
+        buf.write("\5\20\t\2}~\7\35\2\2~\177\7\25\2\2\177\u00a1\3\2\2\2\u0080")
+        buf.write("\u0081\7\34\2\2\u0081\u0082\5\20\t\2\u0082\u0083\7\35")
+        buf.write("\2\2\u0083\u0084\7\3\2\2\u0084\u0085\7\25\2\2\u0085\u0086")
+        buf.write("\7\64\2\2\u0086\u0087\5\b\5\2\u0087\u0088\7\65\2\2\u0088")
+        buf.write("\u00a1\3\2\2\2\u0089\u008a\7\34\2\2\u008a\u008b\5\20\t")
+        buf.write("\2\u008b\u008c\7\35\2\2\u008c\u008d\7\5\2\2\u008d\u008e")
+        buf.write("\5\36\20\2\u008e\u008f\7\25\2\2\u008f\u00a1\3\2\2\2\u0090")
+        buf.write("\u0091\7\34\2\2\u0091\u0092\7\20\2\2\u0092\u0093\7\35")
+        buf.write("\2\2\u0093\u0094\7\5\2\2\u0094\u0095\5\36\20\2\u0095\u0096")
+        buf.write("\7\25\2\2\u0096\u00a1\3\2\2\2\u0097\u0098\7\34\2\2\u0098")
+        buf.write("\u0099\7\20\2\2\u0099\u009a\7\35\2\2\u009a\u009b\7\3\2")
+        buf.write("\2\u009b\u009c\7\25\2\2\u009c\u009d\7\64\2\2\u009d\u009e")
+        buf.write("\5\b\5\2\u009e\u009f\7\65\2\2\u009f\u00a1\3\2\2\2\u00a0")
+        buf.write("{\3\2\2\2\u00a0\u0080\3\2\2\2\u00a0\u0089\3\2\2\2\u00a0")
+        buf.write("\u0090\3\2\2\2\u00a0\u0097\3\2\2\2\u00a1\17\3\2\2\2\u00a2")
+        buf.write("\u00a4\5\22\n\2\u00a3\u00a2\3\2\2\2\u00a4\u00a5\3\2\2")
+        buf.write("\2\u00a5\u00a3\3\2\2\2\u00a5\u00a6\3\2\2\2\u00a6\21\3")
+        buf.write("\2\2\2\u00a7\u00ad\5\24\13\2\u00a8\u00ad\5\26\f\2\u00a9")
+        buf.write("\u00ad\5\30\r\2\u00aa\u00ad\5\32\16\2\u00ab\u00ad\5\34")
+        buf.write("\17\2\u00ac\u00a7\3\2\2\2\u00ac\u00a8\3\2\2\2\u00ac\u00a9")
+        buf.write("\3\2\2\2\u00ac\u00aa\3\2\2\2\u00ac\u00ab\3\2\2\2\u00ad")
+        buf.write("\23\3\2\2\2\u00ae\u00af\7\20\2\2\u00af\25\3\2\2\2\u00b0")
+        buf.write("\u00b2\7-\2\2\u00b1\u00b3\7\6\2\2\u00b2\u00b1\3\2\2\2")
+        buf.write("\u00b2\u00b3\3\2\2\2\u00b3\27\3\2\2\2\u00b4\u00b6\7\61")
+        buf.write("\2\2\u00b5\u00b7\7\6\2\2\u00b6\u00b5\3\2\2\2\u00b6\u00b7")
+        buf.write("\3\2\2\2\u00b7\31\3\2\2\2\u00b8\u00b9\7-\2\2\u00b9\u00ba")
+        buf.write("\7\36\2\2\u00ba\u00bc\7-\2\2\u00bb\u00bd\7\6\2\2\u00bc")
+        buf.write("\u00bb\3\2\2\2\u00bc\u00bd\3\2\2\2\u00bd\33\3\2\2\2\u00be")
+        buf.write("\u00bf\7\32\2\2\u00bf\u00c0\7-\2\2\u00c0\u00c2\7\33\2")
+        buf.write("\2\u00c1\u00c3\7\6\2\2\u00c2\u00c1\3\2\2\2\u00c2\u00c3")
+        buf.write("\3\2\2\2\u00c3\35\3\2\2\2\u00c4\u00c6\7.\2\2\u00c5\u00c4")
+        buf.write("\3\2\2\2\u00c5\u00c6\3\2\2\2\u00c6\u00c7\3\2\2\2\u00c7")
+        buf.write("\u00c8\7-\2\2\u00c8\u00ca\7\30\2\2\u00c9\u00cb\5\64\33")
+        buf.write("\2\u00ca\u00c9\3\2\2\2\u00ca\u00cb\3\2\2\2\u00cb\u00cc")
+        buf.write("\3\2\2\2\u00cc\u00cd\7\31\2\2\u00cd\37\3\2\2\2\u00ce\u00d0")
+        buf.write("\7.\2\2\u00cf\u00ce\3\2\2\2\u00cf\u00d0\3\2\2\2\u00d0")
+        buf.write("\u00d1\3\2\2\2\u00d1\u00d2\7\r\2\2\u00d2\u00d4\7\30\2")
+        buf.write("\2\u00d3\u00d5\5\64\33\2\u00d4\u00d3\3\2\2\2\u00d4\u00d5")
+        buf.write("\3\2\2\2\u00d5\u00d6\3\2\2\2\u00d6\u00d7\7\31\2\2\u00d7")
+        buf.write("!\3\2\2\2\u00d8\u00da\7.\2\2\u00d9\u00d8\3\2\2\2\u00d9")
+        buf.write("\u00da\3\2\2\2\u00da\u00db\3\2\2\2\u00db\u00dc\7\16\2")
+        buf.write("\2\u00dc\u00dd\7\30\2\2\u00dd\u00de\7-\2\2\u00de\u00df")
+        buf.write("\7\31\2\2\u00df#\3\2\2\2\u00e0\u00e2\7.\2\2\u00e1\u00e0")
+        buf.write("\3\2\2\2\u00e1\u00e2\3\2\2\2\u00e2\u00e3\3\2\2\2\u00e3")
+        buf.write("\u00e5\7\f\2\2\u00e4\u00e6\5\64\33\2\u00e5\u00e4\3\2\2")
+        buf.write("\2\u00e5\u00e6\3\2\2\2\u00e6%\3\2\2\2\u00e7\u00e9\7.\2")
+        buf.write("\2\u00e8\u00e7\3\2\2\2\u00e8\u00e9\3\2\2\2\u00e9\u00ea")
+        buf.write("\3\2\2\2\u00ea\u00eb\7\t\2\2\u00eb\u00ec\7\3\2\2\u00ec")
+        buf.write("\u00ed\7\25\2\2\u00ed\u00ee\7\64\2\2\u00ee\u00ef\5\n\6")
+        buf.write("\2\u00ef\u00f0\7\65\2\2\u00f0\'\3\2\2\2\u00f1\u00f3\7")
+        buf.write(".\2\2\u00f2\u00f1\3\2\2\2\u00f2\u00f3\3\2\2\2\u00f3\u00f4")
+        buf.write("\3\2\2\2\u00f4\u00f5\7\13\2\2\u00f5\u00f6\7\3\2\2\u00f6")
+        buf.write("\u00f7\7\25\2\2\u00f7\u00f8\7\64\2\2\u00f8\u00f9\5\b\5")
+        buf.write("\2\u00f9\u00fa\7\65\2\2\u00fa)\3\2\2\2\u00fb\u00fd\7.")
+        buf.write("\2\2\u00fc\u00fb\3\2\2\2\u00fc\u00fd\3\2\2\2\u00fd\u00fe")
+        buf.write("\3\2\2\2\u00fe\u00ff\7\17\2\2\u00ff\u0100\7-\2\2\u0100")
+        buf.write("\u0101\7\3\2\2\u0101\u0102\7\25\2\2\u0102\u0103\7\64\2")
+        buf.write("\2\u0103\u0104\5\b\5\2\u0104\u0106\7\65\2\2\u0105\u0107")
+        buf.write("\5,\27\2\u0106\u0105\3\2\2\2\u0106\u0107\3\2\2\2\u0107")
+        buf.write("\u0109\3\2\2\2\u0108\u010a\5\60\31\2\u0109\u0108\3\2\2")
+        buf.write("\2\u0109\u010a\3\2\2\2\u010a+\3\2\2\2\u010b\u010d\5.\30")
+        buf.write("\2\u010c\u010b\3\2\2\2\u010d\u010e\3\2\2\2\u010e\u010c")
+        buf.write("\3\2\2\2\u010e\u010f\3\2\2\2\u010f-\3\2\2\2\u0110\u0111")
+        buf.write("\7\21\2\2\u0111\u0112\7-\2\2\u0112\u0113\7\3\2\2\u0113")
+        buf.write("\u0114\7\25\2\2\u0114\u0115\7\64\2\2\u0115\u0116\5\b\5")
+        buf.write("\2\u0116\u0117\7\65\2\2\u0117/\3\2\2\2\u0118\u0119\7\20")
+        buf.write("\2\2\u0119\u011a\7\3\2\2\u011a\u011b\7\25\2\2\u011b\u011c")
+        buf.write("\7\64\2\2\u011c\u011d\5\b\5\2\u011d\u011e\7\65\2\2\u011e")
+        buf.write("\61\3\2\2\2\u011f\u0124\7-\2\2\u0120\u0121\7\4\2\2\u0121")
+        buf.write("\u0123\7-\2\2\u0122\u0120\3\2\2\2\u0123\u0126\3\2\2\2")
+        buf.write("\u0124\u0122\3\2\2\2\u0124\u0125\3\2\2\2\u0125\63\3\2")
+        buf.write("\2\2\u0126\u0124\3\2\2\2\u0127\u012c\7-\2\2\u0128\u012c")
+        buf.write("\7\61\2\2\u0129\u012c\7.\2\2\u012a\u012c\5\66\34\2\u012b")
+        buf.write("\u0127\3\2\2\2\u012b\u0128\3\2\2\2\u012b\u0129\3\2\2\2")
+        buf.write("\u012b\u012a\3\2\2\2\u012c\u0136\3\2\2\2\u012d\u0132\7")
+        buf.write("\4\2\2\u012e\u0133\7-\2\2\u012f\u0133\7\61\2\2\u0130\u0133")
+        buf.write("\7.\2\2\u0131\u0133\5\66\34\2\u0132\u012e\3\2\2\2\u0132")
+        buf.write("\u012f\3\2\2\2\u0132\u0130\3\2\2\2\u0132\u0131\3\2\2\2")
+        buf.write("\u0133\u0135\3\2\2\2\u0134\u012d\3\2\2\2\u0135\u0138\3")
+        buf.write("\2\2\2\u0136\u0134\3\2\2\2\u0136\u0137\3\2\2\2\u0137\65")
+        buf.write("\3\2\2\2\u0138\u0136\3\2\2\2\u0139\u013a\7\32\2\2\u013a")
+        buf.write("\u013b\58\35\2\u013b\u013c\7\33\2\2\u013c\67\3\2\2\2\u013d")
+        buf.write("\u0142\7-\2\2\u013e\u0142\7\61\2\2\u013f\u0142\7.\2\2")
+        buf.write("\u0140\u0142\5\66\34\2\u0141\u013d\3\2\2\2\u0141\u013e")
+        buf.write("\3\2\2\2\u0141\u013f\3\2\2\2\u0141\u0140\3\2\2\2\u0142")
+        buf.write("\u0143\3\2\2\2\u0143\u0141\3\2\2\2\u0143\u0144\3\2\2\2")
+        buf.write("\u01449\3\2\2\2#=?HSagy\u00a0\u00a5\u00ac\u00b2\u00b6")
+        buf.write("\u00bc\u00c2\u00c5\u00ca\u00cf\u00d4\u00d9\u00e1\u00e5")
+        buf.write("\u00e8\u00f2\u00fc\u0106\u0109\u010e\u0124\u012b\u0132")
+        buf.write("\u0136\u0141\u0143")
         return buf.getvalue()
 
 
@@ -150,22 +167,23 @@ class ScriptdogParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'->'", "'?'", "'!'", "'global'", "'expect'", 
-                     "'include'", "'opt'", "'return'", "'!set'", "'!clear'", 
-                     "'if'", "'else'", "'elseif'", "'true'", "'false'", 
-                     "'<'", "'>'", "'('", "')'", "'{'", "'}'", "'['", "']'", 
-                     "'='", "'|'", "'=='", "'||'", "'&&'", "'<='", "'>='", 
-                     "'~='", "'+'", "'-'", "'~'", "'*'", "'/'", "'^'" ]
+    literalNames = [ "<INVALID>", "':'", "','", "'->'", "'?'", "'!'", "'global'", 
+                     "'expect'", "'include'", "'choice'", "'return'", "'set!'", 
+                     "'clear!'", "'if'", "'else'", "'elseif'", "'True'", 
+                     "'False'", "'def'", "<INVALID>", "'<'", "'>'", "'('", 
+                     "')'", "'{'", "'}'", "'['", "']'", "'='", "'|'", "'=='", 
+                     "'||'", "'&&'", "'<='", "'>='", "'~='", "'+'", "'-'", 
+                     "'~'", "'*'", "'/'", "'^'" ]
 
-    symbolicNames = [ "<INVALID>", "RTARROW", "QUES", "BANG", "GLOBAL", 
-                      "EXPECT", "INCLUDE", "OPT", "RETURN", "BANGSET", "BANGCLEAR", 
-                      "IF", "ELSE", "ELSEIF", "TRUE", "FALSE", "LST", "GRT", 
-                      "LPAREN", "RPAREN", "LBRACE", "RBRACE", "LSBRACE", 
-                      "RSBRACE", "EQ", "PIPE", "DOUBLE_EQ", "LOG_OR", "LOG_AND", 
-                      "LSTE", "GRTE", "NEQ", "PLUS", "MINUS", "NEG", "TIMES", 
-                      "LEFTDIV", "EXP", "BOOLEAN", "ID", "NUMBER", "INT", 
-                      "FLOAT", "STRING", "ML_COMMENT", "WS", "EOL", "SL_COMMENT", 
-                      "SL2_COMMENT" ]
+    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "RTARROW", 
+                      "QUES", "BANG", "GLOBAL", "EXPECT", "INCLUDE", "CHOICE", 
+                      "RETURN", "SETBANG", "CLEARBANG", "IF", "ELSE", "ELSEIF", 
+                      "TRUE", "FALSE", "DEF", "NEWLINE", "LST", "GRT", "LPAREN", 
+                      "RPAREN", "LBRACE", "RBRACE", "LSBRACE", "RSBRACE", 
+                      "EQ", "PIPE", "DOUBLE_EQ", "LOG_OR", "LOG_AND", "LSTE", 
+                      "GRTE", "NEQ", "PLUS", "MINUS", "NEG", "TIMES", "LEFTDIV", 
+                      "EXP", "BOOLEAN", "ID", "NUMBER", "INT", "FLOAT", 
+                      "STRING", "SKIP_", "ML_COMMENT", "INDENT", "DEDENT" ]
 
     RULE_program = 0
     RULE_named_state_definition = 1
@@ -182,11 +200,11 @@ class ScriptdogParser ( Parser ):
     RULE_assgn_uop = 12
     RULE_varref_uop = 13
     RULE_named_state = 14
-    RULE_expect_statement = 15
-    RULE_set_statement = 16
-    RULE_clear_statement = 17
-    RULE_opt_statement = 18
-    RULE_return_statement = 19
+    RULE_set_statement = 15
+    RULE_clear_statement = 16
+    RULE_return_statement = 17
+    RULE_expect_statement = 18
+    RULE_choice_statement = 19
     RULE_if_statement = 20
     RULE_elseif_statement_list = 21
     RULE_elseif_statement = 22
@@ -195,67 +213,68 @@ class ScriptdogParser ( Parser ):
     RULE_argument_list = 25
     RULE_varref = 26
     RULE_expr = 27
-    RULE_filename = 28
 
     ruleNames =  [ "program", "named_state_definition", "named_utterance_definition", 
                    "state_op_list", "utterance_op_list", "state_op", "utterance_op", 
                    "utterance_innards_list", "utterance_innard", "else_uop", 
                    "idref_uop", "regexv_uop", "assgn_uop", "varref_uop", 
-                   "named_state", "expect_statement", "set_statement", "clear_statement", 
-                   "opt_statement", "return_statement", "if_statement", 
+                   "named_state", "set_statement", "clear_statement", "return_statement", 
+                   "expect_statement", "choice_statement", "if_statement", 
                    "elseif_statement_list", "elseif_statement", "else_statement", 
-                   "parameter_list", "argument_list", "varref", "expr", 
-                   "filename" ]
+                   "parameter_list", "argument_list", "varref", "expr" ]
 
     EOF = Token.EOF
-    RTARROW=1
-    QUES=2
-    BANG=3
-    GLOBAL=4
-    EXPECT=5
-    INCLUDE=6
-    OPT=7
-    RETURN=8
-    BANGSET=9
-    BANGCLEAR=10
-    IF=11
-    ELSE=12
-    ELSEIF=13
-    TRUE=14
-    FALSE=15
-    LST=16
-    GRT=17
-    LPAREN=18
-    RPAREN=19
-    LBRACE=20
-    RBRACE=21
-    LSBRACE=22
-    RSBRACE=23
-    EQ=24
-    PIPE=25
-    DOUBLE_EQ=26
-    LOG_OR=27
-    LOG_AND=28
-    LSTE=29
-    GRTE=30
-    NEQ=31
-    PLUS=32
-    MINUS=33
-    NEG=34
-    TIMES=35
-    LEFTDIV=36
-    EXP=37
-    BOOLEAN=38
-    ID=39
-    NUMBER=40
-    INT=41
-    FLOAT=42
-    STRING=43
-    ML_COMMENT=44
-    WS=45
-    EOL=46
-    SL_COMMENT=47
-    SL2_COMMENT=48
+    T__0=1
+    T__1=2
+    RTARROW=3
+    QUES=4
+    BANG=5
+    GLOBAL=6
+    EXPECT=7
+    INCLUDE=8
+    CHOICE=9
+    RETURN=10
+    SETBANG=11
+    CLEARBANG=12
+    IF=13
+    ELSE=14
+    ELSEIF=15
+    TRUE=16
+    FALSE=17
+    DEF=18
+    NEWLINE=19
+    LST=20
+    GRT=21
+    LPAREN=22
+    RPAREN=23
+    LBRACE=24
+    RBRACE=25
+    LSBRACE=26
+    RSBRACE=27
+    EQ=28
+    PIPE=29
+    DOUBLE_EQ=30
+    LOG_OR=31
+    LOG_AND=32
+    LSTE=33
+    GRTE=34
+    NEQ=35
+    PLUS=36
+    MINUS=37
+    NEG=38
+    TIMES=39
+    LEFTDIV=40
+    EXP=41
+    BOOLEAN=42
+    ID=43
+    NUMBER=44
+    INT=45
+    FLOAT=46
+    STRING=47
+    SKIP_=48
+    ML_COMMENT=49
+    INDENT=50
+    DEDENT=51
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -270,6 +289,15 @@ class ScriptdogParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+
+        def EOF(self):
+            return self.getToken(ScriptdogParser.EOF, 0)
+
+        def NEWLINE(self, i:int=None):
+            if i is None:
+                return self.getTokens(ScriptdogParser.NEWLINE)
+            else:
+                return self.getToken(ScriptdogParser.NEWLINE, i)
 
         def named_state_definition(self, i:int=None):
             if i is None:
@@ -312,28 +340,35 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 62
+            self.state = 61
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==ScriptdogParser.LST or _la==ScriptdogParser.LSBRACE:
-                self.state = 60
+            while _la==ScriptdogParser.DEF or _la==ScriptdogParser.NEWLINE:
+                self.state = 59
                 self._errHandler.sync(self)
-                token = self._input.LA(1)
-                if token in [ScriptdogParser.LST]:
-                    self.state = 58
+                la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
+                if la_ == 1:
+                    self.state = 56
+                    self.match(ScriptdogParser.NEWLINE)
+                    pass
+
+                elif la_ == 2:
+                    self.state = 57
                     self.named_state_definition()
                     pass
-                elif token in [ScriptdogParser.LSBRACE]:
-                    self.state = 59
+
+                elif la_ == 3:
+                    self.state = 58
                     self.named_utterance_definition()
                     pass
-                else:
-                    raise NoViableAltException(self)
 
-                self.state = 64
+
+                self.state = 63
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
+            self.state = 64
+            self.match(ScriptdogParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -348,24 +383,21 @@ class ScriptdogParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LST(self):
-            return self.getToken(ScriptdogParser.LST, 0)
-
         def ID(self):
             return self.getToken(ScriptdogParser.ID, 0)
 
-        def GRT(self):
-            return self.getToken(ScriptdogParser.GRT, 0)
+        def NEWLINE(self):
+            return self.getToken(ScriptdogParser.NEWLINE, 0)
 
-        def LBRACE(self):
-            return self.getToken(ScriptdogParser.LBRACE, 0)
+        def INDENT(self):
+            return self.getToken(ScriptdogParser.INDENT, 0)
 
         def state_op_list(self):
             return self.getTypedRuleContext(ScriptdogParser.State_op_listContext,0)
 
 
-        def RBRACE(self):
-            return self.getToken(ScriptdogParser.RBRACE, 0)
+        def DEDENT(self):
+            return self.getToken(ScriptdogParser.DEDENT, 0)
 
         def parameter_list(self):
             return self.getTypedRuleContext(ScriptdogParser.Parameter_listContext,0)
@@ -398,26 +430,32 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 65
-            self.match(ScriptdogParser.LST)
             self.state = 66
+            self.match(ScriptdogParser.DEF)
+            self.state = 67
             self.match(ScriptdogParser.ID)
             self.state = 68
+            self.match(ScriptdogParser.LPAREN)
+            self.state = 70
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==ScriptdogParser.ID:
-                self.state = 67
+                self.state = 69
                 self.parameter_list()
 
 
-            self.state = 70
-            self.match(ScriptdogParser.GRT)
-            self.state = 71
-            self.match(ScriptdogParser.LBRACE)
             self.state = 72
-            self.state_op_list()
+            self.match(ScriptdogParser.RPAREN)
             self.state = 73
-            self.match(ScriptdogParser.RBRACE)
+            self.match(ScriptdogParser.T__0)
+            self.state = 74
+            self.match(ScriptdogParser.NEWLINE)
+            self.state = 75
+            self.match(ScriptdogParser.INDENT)
+            self.state = 76
+            self.state_op_list()
+            self.state = 77
+            self.match(ScriptdogParser.DEDENT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -432,24 +470,21 @@ class ScriptdogParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LSBRACE(self):
-            return self.getToken(ScriptdogParser.LSBRACE, 0)
-
         def ID(self):
             return self.getToken(ScriptdogParser.ID, 0)
 
-        def RSBRACE(self):
-            return self.getToken(ScriptdogParser.RSBRACE, 0)
+        def NEWLINE(self):
+            return self.getToken(ScriptdogParser.NEWLINE, 0)
 
-        def LBRACE(self):
-            return self.getToken(ScriptdogParser.LBRACE, 0)
+        def INDENT(self):
+            return self.getToken(ScriptdogParser.INDENT, 0)
 
         def utterance_op_list(self):
             return self.getTypedRuleContext(ScriptdogParser.Utterance_op_listContext,0)
 
 
-        def RBRACE(self):
-            return self.getToken(ScriptdogParser.RBRACE, 0)
+        def DEDENT(self):
+            return self.getToken(ScriptdogParser.DEDENT, 0)
 
         def GLOBAL(self):
             return self.getToken(ScriptdogParser.GLOBAL, 0)
@@ -481,26 +516,32 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 75
-            self.match(ScriptdogParser.LSBRACE)
-            self.state = 77
+            self.state = 79
+            self.match(ScriptdogParser.DEF)
+            self.state = 81
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==ScriptdogParser.GLOBAL:
-                self.state = 76
+                self.state = 80
                 self.match(ScriptdogParser.GLOBAL)
 
 
-            self.state = 79
-            self.match(ScriptdogParser.ID)
-            self.state = 80
-            self.match(ScriptdogParser.RSBRACE)
-            self.state = 81
-            self.match(ScriptdogParser.LBRACE)
-            self.state = 82
-            self.utterance_op_list()
             self.state = 83
-            self.match(ScriptdogParser.RBRACE)
+            self.match(ScriptdogParser.LSBRACE)
+            self.state = 84
+            self.match(ScriptdogParser.ID)
+            self.state = 85
+            self.match(ScriptdogParser.RSBRACE)
+            self.state = 86
+            self.match(ScriptdogParser.T__0)
+            self.state = 87
+            self.match(ScriptdogParser.NEWLINE)
+            self.state = 88
+            self.match(ScriptdogParser.INDENT)
+            self.state = 89
+            self.utterance_op_list()
+            self.state = 90
+            self.match(ScriptdogParser.DEDENT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -549,13 +590,13 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 88
+            self.state = 95
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==ScriptdogParser.LST or _la==ScriptdogParser.NUMBER:
-                self.state = 85
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ScriptdogParser.EXPECT) | (1 << ScriptdogParser.CHOICE) | (1 << ScriptdogParser.RETURN) | (1 << ScriptdogParser.SETBANG) | (1 << ScriptdogParser.CLEARBANG) | (1 << ScriptdogParser.IF) | (1 << ScriptdogParser.ID) | (1 << ScriptdogParser.NUMBER))) != 0):
+                self.state = 92
                 self.state_op()
-                self.state = 90
+                self.state = 97
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -607,13 +648,13 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 94
+            self.state = 101
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==ScriptdogParser.LSBRACE:
-                self.state = 91
+                self.state = 98
                 self.utterance_op()
-                self.state = 96
+                self.state = 103
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -635,20 +676,23 @@ class ScriptdogParser ( Parser ):
             return self.getTypedRuleContext(ScriptdogParser.Expect_statementContext,0)
 
 
-        def set_statement(self):
-            return self.getTypedRuleContext(ScriptdogParser.Set_statementContext,0)
-
-
-        def clear_statement(self):
-            return self.getTypedRuleContext(ScriptdogParser.Clear_statementContext,0)
-
-
-        def opt_statement(self):
-            return self.getTypedRuleContext(ScriptdogParser.Opt_statementContext,0)
+        def choice_statement(self):
+            return self.getTypedRuleContext(ScriptdogParser.Choice_statementContext,0)
 
 
         def if_statement(self):
             return self.getTypedRuleContext(ScriptdogParser.If_statementContext,0)
+
+
+        def set_statement(self):
+            return self.getTypedRuleContext(ScriptdogParser.Set_statementContext,0)
+
+
+        def NEWLINE(self):
+            return self.getToken(ScriptdogParser.NEWLINE, 0)
+
+        def clear_statement(self):
+            return self.getTypedRuleContext(ScriptdogParser.Clear_statementContext,0)
 
 
         def return_statement(self):
@@ -684,49 +728,57 @@ class ScriptdogParser ( Parser ):
         localctx = ScriptdogParser.State_opContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_state_op)
         try:
-            self.state = 104
+            self.state = 119
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 97
+                self.state = 104
                 self.expect_statement()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 98
-                self.set_statement()
+                self.state = 105
+                self.choice_statement()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 99
-                self.clear_statement()
+                self.state = 106
+                self.if_statement()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 100
-                self.opt_statement()
+                self.state = 107
+                self.set_statement()
+                self.state = 108
+                self.match(ScriptdogParser.NEWLINE)
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 101
-                self.if_statement()
+                self.state = 110
+                self.clear_statement()
+                self.state = 111
+                self.match(ScriptdogParser.NEWLINE)
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 102
+                self.state = 113
                 self.return_statement()
+                self.state = 114
+                self.match(ScriptdogParser.NEWLINE)
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 103
+                self.state = 116
                 self.named_state()
+                self.state = 117
+                self.match(ScriptdogParser.NEWLINE)
                 pass
 
 
@@ -754,15 +806,18 @@ class ScriptdogParser ( Parser ):
         def RSBRACE(self):
             return self.getToken(ScriptdogParser.RSBRACE, 0)
 
-        def LBRACE(self):
-            return self.getToken(ScriptdogParser.LBRACE, 0)
+        def NEWLINE(self):
+            return self.getToken(ScriptdogParser.NEWLINE, 0)
+
+        def INDENT(self):
+            return self.getToken(ScriptdogParser.INDENT, 0)
 
         def state_op_list(self):
             return self.getTypedRuleContext(ScriptdogParser.State_op_listContext,0)
 
 
-        def RBRACE(self):
-            return self.getToken(ScriptdogParser.RBRACE, 0)
+        def DEDENT(self):
+            return self.getToken(ScriptdogParser.DEDENT, 0)
 
         def RTARROW(self):
             return self.getToken(ScriptdogParser.RTARROW, 0)
@@ -799,77 +854,91 @@ class ScriptdogParser ( Parser ):
         localctx = ScriptdogParser.Utterance_opContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_utterance_op)
         try:
-            self.state = 135
+            self.state = 158
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 106
+                self.state = 121
                 self.match(ScriptdogParser.LSBRACE)
-                self.state = 107
+                self.state = 122
                 self.utterance_innards_list()
-                self.state = 108
+                self.state = 123
                 self.match(ScriptdogParser.RSBRACE)
+                self.state = 124
+                self.match(ScriptdogParser.NEWLINE)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 110
+                self.state = 126
                 self.match(ScriptdogParser.LSBRACE)
-                self.state = 111
+                self.state = 127
                 self.utterance_innards_list()
-                self.state = 112
+                self.state = 128
                 self.match(ScriptdogParser.RSBRACE)
-                self.state = 113
-                self.match(ScriptdogParser.LBRACE)
-                self.state = 114
+                self.state = 129
+                self.match(ScriptdogParser.T__0)
+                self.state = 130
+                self.match(ScriptdogParser.NEWLINE)
+                self.state = 131
+                self.match(ScriptdogParser.INDENT)
+                self.state = 132
                 self.state_op_list()
-                self.state = 115
-                self.match(ScriptdogParser.RBRACE)
+                self.state = 133
+                self.match(ScriptdogParser.DEDENT)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 117
+                self.state = 135
                 self.match(ScriptdogParser.LSBRACE)
-                self.state = 118
+                self.state = 136
                 self.utterance_innards_list()
-                self.state = 119
+                self.state = 137
                 self.match(ScriptdogParser.RSBRACE)
-                self.state = 120
+                self.state = 138
                 self.match(ScriptdogParser.RTARROW)
-                self.state = 121
+                self.state = 139
                 self.named_state()
+                self.state = 140
+                self.match(ScriptdogParser.NEWLINE)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 123
+                self.state = 142
                 self.match(ScriptdogParser.LSBRACE)
-                self.state = 124
+                self.state = 143
                 self.match(ScriptdogParser.ELSE)
-                self.state = 125
+                self.state = 144
                 self.match(ScriptdogParser.RSBRACE)
-                self.state = 126
+                self.state = 145
                 self.match(ScriptdogParser.RTARROW)
-                self.state = 127
+                self.state = 146
                 self.named_state()
+                self.state = 147
+                self.match(ScriptdogParser.NEWLINE)
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 128
+                self.state = 149
                 self.match(ScriptdogParser.LSBRACE)
-                self.state = 129
+                self.state = 150
                 self.match(ScriptdogParser.ELSE)
-                self.state = 130
+                self.state = 151
                 self.match(ScriptdogParser.RSBRACE)
-                self.state = 131
-                self.match(ScriptdogParser.LBRACE)
-                self.state = 132
+                self.state = 152
+                self.match(ScriptdogParser.T__0)
+                self.state = 153
+                self.match(ScriptdogParser.NEWLINE)
+                self.state = 154
+                self.match(ScriptdogParser.INDENT)
+                self.state = 155
                 self.state_op_list()
-                self.state = 133
-                self.match(ScriptdogParser.RBRACE)
+                self.state = 156
+                self.match(ScriptdogParser.DEDENT)
                 pass
 
 
@@ -921,13 +990,13 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 138 
+            self.state = 161 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 137
+                self.state = 160
                 self.utterance_innard()
-                self.state = 140 
+                self.state = 163 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ScriptdogParser.ELSE) | (1 << ScriptdogParser.LBRACE) | (1 << ScriptdogParser.ID) | (1 << ScriptdogParser.STRING))) != 0)):
@@ -992,36 +1061,36 @@ class ScriptdogParser ( Parser ):
         localctx = ScriptdogParser.Utterance_innardContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_utterance_innard)
         try:
-            self.state = 147
+            self.state = 170
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 142
+                self.state = 165
                 self.else_uop()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 143
+                self.state = 166
                 self.idref_uop()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 144
+                self.state = 167
                 self.regexv_uop()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 145
+                self.state = 168
                 self.assgn_uop()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 146
+                self.state = 169
                 self.varref_uop()
                 pass
 
@@ -1069,7 +1138,7 @@ class ScriptdogParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_else_uop)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 149
+            self.state = 172
             self.match(ScriptdogParser.ELSE)
         except RecognitionException as re:
             localctx.exception = re
@@ -1118,13 +1187,13 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 151
+            self.state = 174
             self.match(ScriptdogParser.ID)
-            self.state = 153
+            self.state = 176
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==ScriptdogParser.QUES:
-                self.state = 152
+                self.state = 175
                 self.match(ScriptdogParser.QUES)
 
 
@@ -1175,13 +1244,13 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 155
+            self.state = 178
             self.match(ScriptdogParser.STRING)
-            self.state = 157
+            self.state = 180
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==ScriptdogParser.QUES:
-                self.state = 156
+                self.state = 179
                 self.match(ScriptdogParser.QUES)
 
 
@@ -1238,17 +1307,17 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 159
+            self.state = 182
             self.match(ScriptdogParser.ID)
-            self.state = 160
+            self.state = 183
             self.match(ScriptdogParser.EQ)
-            self.state = 161
+            self.state = 184
             self.match(ScriptdogParser.ID)
-            self.state = 163
+            self.state = 186
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==ScriptdogParser.QUES:
-                self.state = 162
+                self.state = 185
                 self.match(ScriptdogParser.QUES)
 
 
@@ -1305,17 +1374,17 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 165
+            self.state = 188
             self.match(ScriptdogParser.LBRACE)
-            self.state = 166
+            self.state = 189
             self.match(ScriptdogParser.ID)
-            self.state = 167
+            self.state = 190
             self.match(ScriptdogParser.RBRACE)
-            self.state = 169
+            self.state = 192
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==ScriptdogParser.QUES:
-                self.state = 168
+                self.state = 191
                 self.match(ScriptdogParser.QUES)
 
 
@@ -1333,14 +1402,8 @@ class ScriptdogParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LST(self):
-            return self.getToken(ScriptdogParser.LST, 0)
-
         def ID(self):
             return self.getToken(ScriptdogParser.ID, 0)
-
-        def GRT(self):
-            return self.getToken(ScriptdogParser.GRT, 0)
 
         def NUMBER(self):
             return self.getToken(ScriptdogParser.NUMBER, 0)
@@ -1376,111 +1439,28 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 172
+            self.state = 195
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==ScriptdogParser.NUMBER:
-                self.state = 171
+                self.state = 194
                 self.match(ScriptdogParser.NUMBER)
 
 
-            self.state = 174
-            self.match(ScriptdogParser.LST)
-            self.state = 175
+            self.state = 197
             self.match(ScriptdogParser.ID)
-            self.state = 177
+            self.state = 198
+            self.match(ScriptdogParser.LPAREN)
+            self.state = 200
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ScriptdogParser.LBRACE) | (1 << ScriptdogParser.ID) | (1 << ScriptdogParser.NUMBER) | (1 << ScriptdogParser.STRING))) != 0):
-                self.state = 176
+                self.state = 199
                 self.argument_list()
 
 
-            self.state = 179
-            self.match(ScriptdogParser.GRT)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class Expect_statementContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def LST(self):
-            return self.getToken(ScriptdogParser.LST, 0)
-
-        def EXPECT(self):
-            return self.getToken(ScriptdogParser.EXPECT, 0)
-
-        def GRT(self):
-            return self.getToken(ScriptdogParser.GRT, 0)
-
-        def LBRACE(self):
-            return self.getToken(ScriptdogParser.LBRACE, 0)
-
-        def utterance_op_list(self):
-            return self.getTypedRuleContext(ScriptdogParser.Utterance_op_listContext,0)
-
-
-        def RBRACE(self):
-            return self.getToken(ScriptdogParser.RBRACE, 0)
-
-        def NUMBER(self):
-            return self.getToken(ScriptdogParser.NUMBER, 0)
-
-        def getRuleIndex(self):
-            return ScriptdogParser.RULE_expect_statement
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpect_statement" ):
-                listener.enterExpect_statement(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpect_statement" ):
-                listener.exitExpect_statement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpect_statement" ):
-                return visitor.visitExpect_statement(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def expect_statement(self):
-
-        localctx = ScriptdogParser.Expect_statementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_expect_statement)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 182
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==ScriptdogParser.NUMBER:
-                self.state = 181
-                self.match(ScriptdogParser.NUMBER)
-
-
-            self.state = 184
-            self.match(ScriptdogParser.LST)
-            self.state = 185
-            self.match(ScriptdogParser.EXPECT)
-            self.state = 186
-            self.match(ScriptdogParser.GRT)
-            self.state = 187
-            self.match(ScriptdogParser.LBRACE)
-            self.state = 188
-            self.utterance_op_list()
-            self.state = 189
-            self.match(ScriptdogParser.RBRACE)
+            self.state = 202
+            self.match(ScriptdogParser.RPAREN)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1495,14 +1475,8 @@ class ScriptdogParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LST(self):
-            return self.getToken(ScriptdogParser.LST, 0)
-
-        def BANGSET(self):
-            return self.getToken(ScriptdogParser.BANGSET, 0)
-
-        def GRT(self):
-            return self.getToken(ScriptdogParser.GRT, 0)
+        def SETBANG(self):
+            return self.getToken(ScriptdogParser.SETBANG, 0)
 
         def NUMBER(self):
             return self.getToken(ScriptdogParser.NUMBER, 0)
@@ -1534,32 +1508,32 @@ class ScriptdogParser ( Parser ):
     def set_statement(self):
 
         localctx = ScriptdogParser.Set_statementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_set_statement)
+        self.enterRule(localctx, 30, self.RULE_set_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 192
+            self.state = 205
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==ScriptdogParser.NUMBER:
-                self.state = 191
+                self.state = 204
                 self.match(ScriptdogParser.NUMBER)
 
 
-            self.state = 194
-            self.match(ScriptdogParser.LST)
-            self.state = 195
-            self.match(ScriptdogParser.BANGSET)
-            self.state = 197
+            self.state = 207
+            self.match(ScriptdogParser.SETBANG)
+            self.state = 208
+            self.match(ScriptdogParser.LPAREN)
+            self.state = 210
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ScriptdogParser.LBRACE) | (1 << ScriptdogParser.ID) | (1 << ScriptdogParser.NUMBER) | (1 << ScriptdogParser.STRING))) != 0):
-                self.state = 196
+                self.state = 209
                 self.argument_list()
 
 
-            self.state = 199
-            self.match(ScriptdogParser.GRT)
+            self.state = 212
+            self.match(ScriptdogParser.RPAREN)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1574,17 +1548,11 @@ class ScriptdogParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LST(self):
-            return self.getToken(ScriptdogParser.LST, 0)
-
-        def BANGCLEAR(self):
-            return self.getToken(ScriptdogParser.BANGCLEAR, 0)
+        def CLEARBANG(self):
+            return self.getToken(ScriptdogParser.CLEARBANG, 0)
 
         def ID(self):
             return self.getToken(ScriptdogParser.ID, 0)
-
-        def GRT(self):
-            return self.getToken(ScriptdogParser.GRT, 0)
 
         def NUMBER(self):
             return self.getToken(ScriptdogParser.NUMBER, 0)
@@ -1612,109 +1580,26 @@ class ScriptdogParser ( Parser ):
     def clear_statement(self):
 
         localctx = ScriptdogParser.Clear_statementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_clear_statement)
+        self.enterRule(localctx, 32, self.RULE_clear_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 202
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==ScriptdogParser.NUMBER:
-                self.state = 201
-                self.match(ScriptdogParser.NUMBER)
-
-
-            self.state = 204
-            self.match(ScriptdogParser.LST)
-            self.state = 205
-            self.match(ScriptdogParser.BANGCLEAR)
-            self.state = 206
-            self.match(ScriptdogParser.ID)
-            self.state = 207
-            self.match(ScriptdogParser.GRT)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class Opt_statementContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def LST(self):
-            return self.getToken(ScriptdogParser.LST, 0)
-
-        def OPT(self):
-            return self.getToken(ScriptdogParser.OPT, 0)
-
-        def GRT(self):
-            return self.getToken(ScriptdogParser.GRT, 0)
-
-        def LBRACE(self):
-            return self.getToken(ScriptdogParser.LBRACE, 0)
-
-        def state_op_list(self):
-            return self.getTypedRuleContext(ScriptdogParser.State_op_listContext,0)
-
-
-        def RBRACE(self):
-            return self.getToken(ScriptdogParser.RBRACE, 0)
-
-        def NUMBER(self):
-            return self.getToken(ScriptdogParser.NUMBER, 0)
-
-        def getRuleIndex(self):
-            return ScriptdogParser.RULE_opt_statement
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOpt_statement" ):
-                listener.enterOpt_statement(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOpt_statement" ):
-                listener.exitOpt_statement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOpt_statement" ):
-                return visitor.visitOpt_statement(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def opt_statement(self):
-
-        localctx = ScriptdogParser.Opt_statementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_opt_statement)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 210
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==ScriptdogParser.NUMBER:
-                self.state = 209
-                self.match(ScriptdogParser.NUMBER)
-
-
-            self.state = 212
-            self.match(ScriptdogParser.LST)
-            self.state = 213
-            self.match(ScriptdogParser.OPT)
-            self.state = 214
-            self.match(ScriptdogParser.GRT)
             self.state = 215
-            self.match(ScriptdogParser.LBRACE)
-            self.state = 216
-            self.state_op_list()
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==ScriptdogParser.NUMBER:
+                self.state = 214
+                self.match(ScriptdogParser.NUMBER)
+
+
             self.state = 217
-            self.match(ScriptdogParser.RBRACE)
+            self.match(ScriptdogParser.CLEARBANG)
+            self.state = 218
+            self.match(ScriptdogParser.LPAREN)
+            self.state = 219
+            self.match(ScriptdogParser.ID)
+            self.state = 220
+            self.match(ScriptdogParser.RPAREN)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1729,17 +1614,15 @@ class ScriptdogParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LST(self):
-            return self.getToken(ScriptdogParser.LST, 0)
-
         def RETURN(self):
             return self.getToken(ScriptdogParser.RETURN, 0)
 
-        def GRT(self):
-            return self.getToken(ScriptdogParser.GRT, 0)
-
         def NUMBER(self):
             return self.getToken(ScriptdogParser.NUMBER, 0)
+
+        def argument_list(self):
+            return self.getTypedRuleContext(ScriptdogParser.Argument_listContext,0)
+
 
         def getRuleIndex(self):
             return ScriptdogParser.RULE_return_statement
@@ -1764,24 +1647,188 @@ class ScriptdogParser ( Parser ):
     def return_statement(self):
 
         localctx = ScriptdogParser.Return_statementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_return_statement)
+        self.enterRule(localctx, 34, self.RULE_return_statement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 220
+            self.state = 223
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==ScriptdogParser.NUMBER:
-                self.state = 219
+                self.state = 222
                 self.match(ScriptdogParser.NUMBER)
 
 
-            self.state = 222
-            self.match(ScriptdogParser.LST)
-            self.state = 223
+            self.state = 225
             self.match(ScriptdogParser.RETURN)
-            self.state = 224
-            self.match(ScriptdogParser.GRT)
+            self.state = 227
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ScriptdogParser.LBRACE) | (1 << ScriptdogParser.ID) | (1 << ScriptdogParser.NUMBER) | (1 << ScriptdogParser.STRING))) != 0):
+                self.state = 226
+                self.argument_list()
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class Expect_statementContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def EXPECT(self):
+            return self.getToken(ScriptdogParser.EXPECT, 0)
+
+        def NEWLINE(self):
+            return self.getToken(ScriptdogParser.NEWLINE, 0)
+
+        def INDENT(self):
+            return self.getToken(ScriptdogParser.INDENT, 0)
+
+        def utterance_op_list(self):
+            return self.getTypedRuleContext(ScriptdogParser.Utterance_op_listContext,0)
+
+
+        def DEDENT(self):
+            return self.getToken(ScriptdogParser.DEDENT, 0)
+
+        def NUMBER(self):
+            return self.getToken(ScriptdogParser.NUMBER, 0)
+
+        def getRuleIndex(self):
+            return ScriptdogParser.RULE_expect_statement
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExpect_statement" ):
+                listener.enterExpect_statement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExpect_statement" ):
+                listener.exitExpect_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpect_statement" ):
+                return visitor.visitExpect_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def expect_statement(self):
+
+        localctx = ScriptdogParser.Expect_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 36, self.RULE_expect_statement)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 230
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==ScriptdogParser.NUMBER:
+                self.state = 229
+                self.match(ScriptdogParser.NUMBER)
+
+
+            self.state = 232
+            self.match(ScriptdogParser.EXPECT)
+            self.state = 233
+            self.match(ScriptdogParser.T__0)
+            self.state = 234
+            self.match(ScriptdogParser.NEWLINE)
+            self.state = 235
+            self.match(ScriptdogParser.INDENT)
+            self.state = 236
+            self.utterance_op_list()
+            self.state = 237
+            self.match(ScriptdogParser.DEDENT)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class Choice_statementContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def CHOICE(self):
+            return self.getToken(ScriptdogParser.CHOICE, 0)
+
+        def NEWLINE(self):
+            return self.getToken(ScriptdogParser.NEWLINE, 0)
+
+        def INDENT(self):
+            return self.getToken(ScriptdogParser.INDENT, 0)
+
+        def state_op_list(self):
+            return self.getTypedRuleContext(ScriptdogParser.State_op_listContext,0)
+
+
+        def DEDENT(self):
+            return self.getToken(ScriptdogParser.DEDENT, 0)
+
+        def NUMBER(self):
+            return self.getToken(ScriptdogParser.NUMBER, 0)
+
+        def getRuleIndex(self):
+            return ScriptdogParser.RULE_choice_statement
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterChoice_statement" ):
+                listener.enterChoice_statement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitChoice_statement" ):
+                listener.exitChoice_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitChoice_statement" ):
+                return visitor.visitChoice_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def choice_statement(self):
+
+        localctx = ScriptdogParser.Choice_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 38, self.RULE_choice_statement)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 240
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==ScriptdogParser.NUMBER:
+                self.state = 239
+                self.match(ScriptdogParser.NUMBER)
+
+
+            self.state = 242
+            self.match(ScriptdogParser.CHOICE)
+            self.state = 243
+            self.match(ScriptdogParser.T__0)
+            self.state = 244
+            self.match(ScriptdogParser.NEWLINE)
+            self.state = 245
+            self.match(ScriptdogParser.INDENT)
+            self.state = 246
+            self.state_op_list()
+            self.state = 247
+            self.match(ScriptdogParser.DEDENT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1796,33 +1843,24 @@ class ScriptdogParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LST(self):
-            return self.getToken(ScriptdogParser.LST, 0)
-
         def IF(self):
             return self.getToken(ScriptdogParser.IF, 0)
-
-        def LBRACE(self, i:int=None):
-            if i is None:
-                return self.getTokens(ScriptdogParser.LBRACE)
-            else:
-                return self.getToken(ScriptdogParser.LBRACE, i)
 
         def ID(self):
             return self.getToken(ScriptdogParser.ID, 0)
 
-        def RBRACE(self, i:int=None):
-            if i is None:
-                return self.getTokens(ScriptdogParser.RBRACE)
-            else:
-                return self.getToken(ScriptdogParser.RBRACE, i)
+        def NEWLINE(self):
+            return self.getToken(ScriptdogParser.NEWLINE, 0)
 
-        def GRT(self):
-            return self.getToken(ScriptdogParser.GRT, 0)
+        def INDENT(self):
+            return self.getToken(ScriptdogParser.INDENT, 0)
 
         def state_op_list(self):
             return self.getTypedRuleContext(ScriptdogParser.State_op_listContext,0)
 
+
+        def DEDENT(self):
+            return self.getToken(ScriptdogParser.DEDENT, 0)
 
         def NUMBER(self):
             return self.getToken(ScriptdogParser.NUMBER, 0)
@@ -1862,45 +1900,41 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 227
+            self.state = 250
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==ScriptdogParser.NUMBER:
-                self.state = 226
+                self.state = 249
                 self.match(ScriptdogParser.NUMBER)
 
 
-            self.state = 229
-            self.match(ScriptdogParser.LST)
-            self.state = 230
+            self.state = 252
             self.match(ScriptdogParser.IF)
-            self.state = 231
-            self.match(ScriptdogParser.LBRACE)
-            self.state = 232
+            self.state = 253
             self.match(ScriptdogParser.ID)
-            self.state = 233
-            self.match(ScriptdogParser.RBRACE)
-            self.state = 234
-            self.match(ScriptdogParser.GRT)
-            self.state = 235
-            self.match(ScriptdogParser.LBRACE)
-            self.state = 236
+            self.state = 254
+            self.match(ScriptdogParser.T__0)
+            self.state = 255
+            self.match(ScriptdogParser.NEWLINE)
+            self.state = 256
+            self.match(ScriptdogParser.INDENT)
+            self.state = 257
             self.state_op_list()
-            self.state = 237
-            self.match(ScriptdogParser.RBRACE)
-            self.state = 239
+            self.state = 258
+            self.match(ScriptdogParser.DEDENT)
+            self.state = 260
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,23,self._ctx)
-            if la_ == 1:
-                self.state = 238
+            _la = self._input.LA(1)
+            if _la==ScriptdogParser.ELSEIF:
+                self.state = 259
                 self.elseif_statement_list()
 
 
-            self.state = 242
+            self.state = 263
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,24,self._ctx)
-            if la_ == 1:
-                self.state = 241
+            _la = self._input.LA(1)
+            if _la==ScriptdogParser.ELSE:
+                self.state = 262
                 self.else_statement()
 
 
@@ -1949,21 +1983,20 @@ class ScriptdogParser ( Parser ):
 
         localctx = ScriptdogParser.Elseif_statement_listContext(self, self._ctx, self.state)
         self.enterRule(localctx, 42, self.RULE_elseif_statement_list)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 245 
+            self.state = 266 
             self._errHandler.sync(self)
-            _alt = 1
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt == 1:
-                    self.state = 244
-                    self.elseif_statement()
-
-                else:
-                    raise NoViableAltException(self)
-                self.state = 247 
+            _la = self._input.LA(1)
+            while True:
+                self.state = 265
+                self.elseif_statement()
+                self.state = 268 
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
+                _la = self._input.LA(1)
+                if not (_la==ScriptdogParser.ELSEIF):
+                    break
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1979,33 +2012,24 @@ class ScriptdogParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LST(self):
-            return self.getToken(ScriptdogParser.LST, 0)
-
         def ELSEIF(self):
             return self.getToken(ScriptdogParser.ELSEIF, 0)
-
-        def LBRACE(self, i:int=None):
-            if i is None:
-                return self.getTokens(ScriptdogParser.LBRACE)
-            else:
-                return self.getToken(ScriptdogParser.LBRACE, i)
 
         def ID(self):
             return self.getToken(ScriptdogParser.ID, 0)
 
-        def RBRACE(self, i:int=None):
-            if i is None:
-                return self.getTokens(ScriptdogParser.RBRACE)
-            else:
-                return self.getToken(ScriptdogParser.RBRACE, i)
+        def NEWLINE(self):
+            return self.getToken(ScriptdogParser.NEWLINE, 0)
 
-        def GRT(self):
-            return self.getToken(ScriptdogParser.GRT, 0)
+        def INDENT(self):
+            return self.getToken(ScriptdogParser.INDENT, 0)
 
         def state_op_list(self):
             return self.getTypedRuleContext(ScriptdogParser.State_op_listContext,0)
 
+
+        def DEDENT(self):
+            return self.getToken(ScriptdogParser.DEDENT, 0)
 
         def getRuleIndex(self):
             return ScriptdogParser.RULE_elseif_statement
@@ -2033,24 +2057,20 @@ class ScriptdogParser ( Parser ):
         self.enterRule(localctx, 44, self.RULE_elseif_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 249
-            self.match(ScriptdogParser.LST)
-            self.state = 250
+            self.state = 270
             self.match(ScriptdogParser.ELSEIF)
-            self.state = 251
-            self.match(ScriptdogParser.LBRACE)
-            self.state = 252
+            self.state = 271
             self.match(ScriptdogParser.ID)
-            self.state = 253
-            self.match(ScriptdogParser.RBRACE)
-            self.state = 254
-            self.match(ScriptdogParser.GRT)
-            self.state = 255
-            self.match(ScriptdogParser.LBRACE)
-            self.state = 256
+            self.state = 272
+            self.match(ScriptdogParser.T__0)
+            self.state = 273
+            self.match(ScriptdogParser.NEWLINE)
+            self.state = 274
+            self.match(ScriptdogParser.INDENT)
+            self.state = 275
             self.state_op_list()
-            self.state = 257
-            self.match(ScriptdogParser.RBRACE)
+            self.state = 276
+            self.match(ScriptdogParser.DEDENT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2065,24 +2085,21 @@ class ScriptdogParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LST(self):
-            return self.getToken(ScriptdogParser.LST, 0)
-
         def ELSE(self):
             return self.getToken(ScriptdogParser.ELSE, 0)
 
-        def GRT(self):
-            return self.getToken(ScriptdogParser.GRT, 0)
+        def NEWLINE(self):
+            return self.getToken(ScriptdogParser.NEWLINE, 0)
 
-        def LBRACE(self):
-            return self.getToken(ScriptdogParser.LBRACE, 0)
+        def INDENT(self):
+            return self.getToken(ScriptdogParser.INDENT, 0)
 
         def state_op_list(self):
             return self.getTypedRuleContext(ScriptdogParser.State_op_listContext,0)
 
 
-        def RBRACE(self):
-            return self.getToken(ScriptdogParser.RBRACE, 0)
+        def DEDENT(self):
+            return self.getToken(ScriptdogParser.DEDENT, 0)
 
         def getRuleIndex(self):
             return ScriptdogParser.RULE_else_statement
@@ -2110,18 +2127,18 @@ class ScriptdogParser ( Parser ):
         self.enterRule(localctx, 46, self.RULE_else_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 259
-            self.match(ScriptdogParser.LST)
-            self.state = 260
+            self.state = 278
             self.match(ScriptdogParser.ELSE)
-            self.state = 261
-            self.match(ScriptdogParser.GRT)
-            self.state = 262
-            self.match(ScriptdogParser.LBRACE)
-            self.state = 263
+            self.state = 279
+            self.match(ScriptdogParser.T__0)
+            self.state = 280
+            self.match(ScriptdogParser.NEWLINE)
+            self.state = 281
+            self.match(ScriptdogParser.INDENT)
+            self.state = 282
             self.state_op_list()
-            self.state = 264
-            self.match(ScriptdogParser.RBRACE)
+            self.state = 283
+            self.match(ScriptdogParser.DEDENT)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2169,17 +2186,19 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 267 
+            self.state = 285
+            self.match(ScriptdogParser.ID)
+            self.state = 290
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while True:
-                self.state = 266
+            while _la==ScriptdogParser.T__1:
+                self.state = 286
+                self.match(ScriptdogParser.T__1)
+                self.state = 287
                 self.match(ScriptdogParser.ID)
-                self.state = 269 
+                self.state = 292
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==ScriptdogParser.ID):
-                    break
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2247,37 +2266,59 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 275 
+            self.state = 297
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [ScriptdogParser.ID]:
+                self.state = 293
+                self.match(ScriptdogParser.ID)
+                pass
+            elif token in [ScriptdogParser.STRING]:
+                self.state = 294
+                self.match(ScriptdogParser.STRING)
+                pass
+            elif token in [ScriptdogParser.NUMBER]:
+                self.state = 295
+                self.match(ScriptdogParser.NUMBER)
+                pass
+            elif token in [ScriptdogParser.LBRACE]:
+                self.state = 296
+                self.varref()
+                pass
+            else:
+                raise NoViableAltException(self)
+
+            self.state = 308
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while True:
-                self.state = 275
+            while _la==ScriptdogParser.T__1:
+                self.state = 299
+                self.match(ScriptdogParser.T__1)
+                self.state = 304
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [ScriptdogParser.ID]:
-                    self.state = 271
+                    self.state = 300
                     self.match(ScriptdogParser.ID)
                     pass
                 elif token in [ScriptdogParser.STRING]:
-                    self.state = 272
+                    self.state = 301
                     self.match(ScriptdogParser.STRING)
                     pass
                 elif token in [ScriptdogParser.NUMBER]:
-                    self.state = 273
+                    self.state = 302
                     self.match(ScriptdogParser.NUMBER)
                     pass
                 elif token in [ScriptdogParser.LBRACE]:
-                    self.state = 274
+                    self.state = 303
                     self.varref()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 277 
+                self.state = 310
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ScriptdogParser.LBRACE) | (1 << ScriptdogParser.ID) | (1 << ScriptdogParser.NUMBER) | (1 << ScriptdogParser.STRING))) != 0)):
-                    break
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2329,11 +2370,11 @@ class ScriptdogParser ( Parser ):
         self.enterRule(localctx, 52, self.RULE_varref)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 279
+            self.state = 311
             self.match(ScriptdogParser.LBRACE)
-            self.state = 280
+            self.state = 312
             self.expr()
-            self.state = 281
+            self.state = 313
             self.match(ScriptdogParser.RBRACE)
         except RecognitionException as re:
             localctx.exception = re
@@ -2401,83 +2442,38 @@ class ScriptdogParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 287 
+            self.state = 319 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 287
+                self.state = 319
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [ScriptdogParser.ID]:
-                    self.state = 283
+                    self.state = 315
                     self.match(ScriptdogParser.ID)
                     pass
                 elif token in [ScriptdogParser.STRING]:
-                    self.state = 284
+                    self.state = 316
                     self.match(ScriptdogParser.STRING)
                     pass
                 elif token in [ScriptdogParser.NUMBER]:
-                    self.state = 285
+                    self.state = 317
                     self.match(ScriptdogParser.NUMBER)
                     pass
                 elif token in [ScriptdogParser.LBRACE]:
-                    self.state = 286
+                    self.state = 318
                     self.varref()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 289 
+                self.state = 321 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << ScriptdogParser.LBRACE) | (1 << ScriptdogParser.ID) | (1 << ScriptdogParser.NUMBER) | (1 << ScriptdogParser.STRING))) != 0)):
                     break
 
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class FilenameContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def STRING(self):
-            return self.getToken(ScriptdogParser.STRING, 0)
-
-        def getRuleIndex(self):
-            return ScriptdogParser.RULE_filename
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFilename" ):
-                listener.enterFilename(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFilename" ):
-                listener.exitFilename(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFilename" ):
-                return visitor.visitFilename(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def filename(self):
-
-        localctx = ScriptdogParser.FilenameContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 56, self.RULE_filename)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 291
-            self.match(ScriptdogParser.STRING)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)

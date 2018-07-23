@@ -143,15 +143,6 @@ class ScriptdogListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ScriptdogParser#expect_statement.
-    def enterExpect_statement(self, ctx:ScriptdogParser.Expect_statementContext):
-        pass
-
-    # Exit a parse tree produced by ScriptdogParser#expect_statement.
-    def exitExpect_statement(self, ctx:ScriptdogParser.Expect_statementContext):
-        pass
-
-
     # Enter a parse tree produced by ScriptdogParser#set_statement.
     def enterSet_statement(self, ctx:ScriptdogParser.Set_statementContext):
         pass
@@ -170,21 +161,30 @@ class ScriptdogListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ScriptdogParser#opt_statement.
-    def enterOpt_statement(self, ctx:ScriptdogParser.Opt_statementContext):
-        pass
-
-    # Exit a parse tree produced by ScriptdogParser#opt_statement.
-    def exitOpt_statement(self, ctx:ScriptdogParser.Opt_statementContext):
-        pass
-
-
     # Enter a parse tree produced by ScriptdogParser#return_statement.
     def enterReturn_statement(self, ctx:ScriptdogParser.Return_statementContext):
         pass
 
     # Exit a parse tree produced by ScriptdogParser#return_statement.
     def exitReturn_statement(self, ctx:ScriptdogParser.Return_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by ScriptdogParser#expect_statement.
+    def enterExpect_statement(self, ctx:ScriptdogParser.Expect_statementContext):
+        pass
+
+    # Exit a parse tree produced by ScriptdogParser#expect_statement.
+    def exitExpect_statement(self, ctx:ScriptdogParser.Expect_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by ScriptdogParser#choice_statement.
+    def enterChoice_statement(self, ctx:ScriptdogParser.Choice_statementContext):
+        pass
+
+    # Exit a parse tree produced by ScriptdogParser#choice_statement.
+    def exitChoice_statement(self, ctx:ScriptdogParser.Choice_statementContext):
         pass
 
 
@@ -257,15 +257,6 @@ class ScriptdogListener(ParseTreeListener):
 
     # Exit a parse tree produced by ScriptdogParser#expr.
     def exitExpr(self, ctx:ScriptdogParser.ExprContext):
-        pass
-
-
-    # Enter a parse tree produced by ScriptdogParser#filename.
-    def enterFilename(self, ctx:ScriptdogParser.FilenameContext):
-        pass
-
-    # Exit a parse tree produced by ScriptdogParser#filename.
-    def exitFilename(self, ctx:ScriptdogParser.FilenameContext):
         pass
 
 

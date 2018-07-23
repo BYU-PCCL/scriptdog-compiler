@@ -84,11 +84,6 @@ class ScriptdogVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by ScriptdogParser#expect_statement.
-    def visitExpect_statement(self, ctx:ScriptdogParser.Expect_statementContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by ScriptdogParser#set_statement.
     def visitSet_statement(self, ctx:ScriptdogParser.Set_statementContext):
         return self.visitChildren(ctx)
@@ -99,13 +94,18 @@ class ScriptdogVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by ScriptdogParser#opt_statement.
-    def visitOpt_statement(self, ctx:ScriptdogParser.Opt_statementContext):
+    # Visit a parse tree produced by ScriptdogParser#return_statement.
+    def visitReturn_statement(self, ctx:ScriptdogParser.Return_statementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by ScriptdogParser#return_statement.
-    def visitReturn_statement(self, ctx:ScriptdogParser.Return_statementContext):
+    # Visit a parse tree produced by ScriptdogParser#expect_statement.
+    def visitExpect_statement(self, ctx:ScriptdogParser.Expect_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ScriptdogParser#choice_statement.
+    def visitChoice_statement(self, ctx:ScriptdogParser.Choice_statementContext):
         return self.visitChildren(ctx)
 
 
@@ -146,11 +146,6 @@ class ScriptdogVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by ScriptdogParser#expr.
     def visitExpr(self, ctx:ScriptdogParser.ExprContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ScriptdogParser#filename.
-    def visitFilename(self, ctx:ScriptdogParser.FilenameContext):
         return self.visitChildren(ctx)
 
 
