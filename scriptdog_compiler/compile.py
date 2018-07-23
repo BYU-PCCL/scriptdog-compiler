@@ -72,7 +72,7 @@ class SimpleVisitor(ScriptdogVisitor):
             op_seq.append(self.visit(i))
         return op_seq
 
-    def visitState_op(self, ctx: scriptdogParser.State_opContext):
+    def visitState_op(self, ctx: ScriptdogParser.State_opContext):
         # this is a bit tricky.  indenting/dedenting requires explicit
         # NEWLINE tokens, which show up as nodes in the tree.  if
         # we're not careful, the default visitor will visit those, and
@@ -186,7 +186,7 @@ class SimpleVisitor(ScriptdogVisitor):
 
         return ClearOp(id, weight)
 
-    def visitChoice_statement(self, ctx: ScriptdogParser.Opt_statementContext):
+    def visitChoice_statement(self, ctx: ScriptdogParser.Choice_statementContext):
         op_set = self.visit(ctx.state_op_list())
 
         if ctx.NUMBER() != None:

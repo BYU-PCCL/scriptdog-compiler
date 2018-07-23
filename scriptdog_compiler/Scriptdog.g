@@ -2,7 +2,7 @@ grammar Scriptdog;
 
 /*
 
-A simple grammar for scriptdog.
+A simple grammar for Scriptdog.
 
 */
 
@@ -34,13 +34,13 @@ def emitToken(self,t):
 
 def nextToken( self ):
   # Check if the end-of-file is ahead and there are still some DEDENTS expected.
-  if self._input.LA(1) == scriptdogParser.EOF and len(self.indents) > 0:
+  if self._input.LA(1) == ScriptdogParser.EOF and len(self.indents) > 0:
     # Remove any trailing EOF tokens from our buffer.
-    while len(self.tokens) > 0 and self.tokens[-1].type == scriptdogParser.EOF:
+    while len(self.tokens) > 0 and self.tokens[-1].type == ScriptdogParser.EOF:
       self.tokens.pop()
     
     # First emit an extra line break that serves as the end of the statement.
-    self.emitToken( self.commonToken(scriptdogParser.NEWLINE, "\n") )
+    self.emitToken( self.commonToken(ScriptdogParser.NEWLINE, "\n") )
 
     # Now emit as much DEDENT tokens as needed.
     while len(self.indents) > 0:
@@ -48,7 +48,7 @@ def nextToken( self ):
       self.indents.pop()
 
     # Put the EOF back on the token stream.
-    self.emitToken( self.commonToken(scriptdogParser.EOF, "<EOF>") )
+    self.emitToken( self.commonToken(ScriptdogParser.EOF, "<EOF>") )
 
   next = super().nextToken()
 
@@ -63,7 +63,7 @@ def nextToken( self ):
     return self.tokens.pop(0)
 
 def createDedent( self ):
-  dedent = self.commonToken( scriptdogParser.DEDENT, "" )
+  dedent = self.commonToken( ScriptdogParser.DEDENT, "" )
   dedent.line = self.lastToken.line
   return dedent
 
@@ -299,7 +299,7 @@ spaces = re.sub( "[\r\n\f]+", "", self.text )
 
 next = self._input.LA(1)
 #print( "next = [%s]" % str(next) )
-if next == scriptdogParser.EOF:
+if next == ScriptdogParser.EOF:
   chr_next = -1
 else:
   chr_next = chr( next )
@@ -311,7 +311,7 @@ if self.opened > 0 or chr_next == '\r' or chr_next == '\n' or chr_next == '\f' o
 
 else:
 
-  self.emitToken( self.commonToken(scriptdogParser.NEWLINE, newLine) )
+  self.emitToken( self.commonToken(ScriptdogParser.NEWLINE, newLine) )
   indent = self.getIndentationCount(spaces)
 
   if len( self.indents ) == 0:
@@ -326,7 +326,7 @@ else:
     self.skip()
   elif indent > previous:
     self.indents.append(indent)
-    self.emitToken( self.commonToken(scriptdogParser.INDENT, spaces) )
+    self.emitToken( self.commonToken(ScriptdogParser.INDENT, spaces) )
   else:
     # Possibly emit more than 1 DEDENT token.
     while len(self.indents) > 0 and self.indents[-1] > indent:
