@@ -11,7 +11,7 @@ from scriptdog_compiler.compiler.ScriptdogListener import ScriptdogListener
 from scriptdog_compiler.compiler.ScriptdogVisitor import ScriptdogVisitor
 
 from scriptdog.objs import (Program, State, Transition, NamedStateOp, ExpectOp,
-                            SetOp, IfOp, ClearOp, OptOp, ReturnOp, UtteranceOp,
+                            SetOp, IfOp, ClearOp, ChoiceOp, ReturnOp, UtteranceOp,
                             IdrefOp, VarrefOp, RegexvOp, AssgnOp, ElseOp)
 
 #
@@ -71,6 +71,14 @@ class SimpleVisitor(ScriptdogVisitor):
         for i in tmp:
             op_seq.append(self.visit(i))
         return op_seq
+
+    def visitState_op(self, ctx: scriptdogParser.State_opContext):
+        # this is a bit tricky.  indenting/dedenting requires explicit
+        # NEWLINE tokens, which show up as nodes in the tree.  if
+        # we're not careful, the default visitor will visit those, and
+        # override whatever chunk of AST we've accumulated with a None
+        # value... so here, we just visit the non-NEWLINE node
+        return self.visit(ctx.getChild(0))
 
     def visitNamed_state(self, ctx: ScriptdogParser.Named_stateContext):
         tmp = ctx.argument_list()
@@ -178,7 +186,7 @@ class SimpleVisitor(ScriptdogVisitor):
 
         return ClearOp(id, weight)
 
-    def visitOpt_statement(self, ctx: ScriptdogParser.Opt_statementContext):
+    def visitChoice_statement(self, ctx: ScriptdogParser.Opt_statementContext):
         op_set = self.visit(ctx.state_op_list())
 
         if ctx.NUMBER() != None:
@@ -197,7 +205,7 @@ class SimpleVisitor(ScriptdogVisitor):
             self.program.add_state(new_state)
             name_set.append([new_state_name, op.weight])
 
-        return OptOp(name_set, weight)
+        return ChoiceOp(name_set, weight)
 
     def visitReturn_statement(self,
                               ctx: ScriptdogParser.Return_statementContext):
@@ -305,13 +313,17 @@ class SimpleVisitor(ScriptdogVisitor):
     def visitParameter_list(self, ctx: ScriptdogParser.Parameter_listContext):
         arglist = []
         for i in range(ctx.getChildCount()):
-            arglist.append(ctx.getChild(i).getText())
+            tmp = ctx.getChild(i).getText()
+            if not tmp == ',':
+                arglist.append(tmp)
         return arglist
 
     def visitArgument_list(self, ctx: ScriptdogParser.Argument_listContext):
         arglist = []
         for i in range(ctx.getChildCount()):
-            arglist.append(ctx.getChild(i).getText())
+            tmp = ctx.getChild(i).getText()
+            if not tmp == ',':
+                arglist.append(tmp)
         return arglist
 
     def visitElseif_statement_list(
@@ -345,7 +357,10 @@ def compile_file(fn):
     new_fn = "/tmp/tmp_script.txt"
 
     # run the C pre processor to handle #include directives
-    subprocess.run("cpp %s > %s" % (fn, new_fn), shell=True)
+    # XXX let's rip this out - we're only using it to implement #include...
+    # run the C pre processor to handle #include directives
+    # the -traditional-cpp flag tries to ensure that the preprocessor does not collapse whitespace (ie, by collapsing tabs to a single space)
+    subprocess.run("cpp -traditional-cpp %s 2>/dev/null > %s" % (fn, new_fn), shell=True)
 
     stream_input = FileStream(new_fn)
     lexer = ScriptdogLexer(stream_input)
@@ -368,5 +383,6 @@ def compile_file(fn):
 
 def validate_program(p):
     # want to make sure that every namedstateop references a defined state!
+    # make sure that they don't re-define states or transitions
     # check their regexs - make sure they have parens around words with "?"
     pass
