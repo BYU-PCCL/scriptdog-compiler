@@ -6,6 +6,99 @@ A simple grammar for scriptdog.
 
 */
 
+tokens { INDENT, DEDENT }
+
+@lexer::header {
+import re
+from . ScriptdogParser import ScriptdogParser
+from antlr4.Token import CommonToken    
+    }
+
+@lexer::members {
+    # A queue where extra tokens are pushed on (see the NEWLINE lexer rule).
+    self.tokens = []
+
+    # The stack that keeps track of the indentation level.
+    self.indents = []
+  
+    # The amount of opened braces, brackets and parenthesis.
+    self.opened = 0
+      
+    # The most recently produced token.
+    self.lastToken = None
+      
+def emitToken(self,t):
+#    print("Emitting token [%s]" % str(t) )
+    super().emitToken(t)
+    self.tokens.append(t)
+
+def nextToken( self ):
+  # Check if the end-of-file is ahead and there are still some DEDENTS expected.
+  if self._input.LA(1) == scriptdogParser.EOF and len(self.indents) > 0:
+    # Remove any trailing EOF tokens from our buffer.
+    while len(self.tokens) > 0 and self.tokens[-1].type == scriptdogParser.EOF:
+      self.tokens.pop()
+    
+    # First emit an extra line break that serves as the end of the statement.
+    self.emitToken( self.commonToken(scriptdogParser.NEWLINE, "\n") )
+
+    # Now emit as much DEDENT tokens as needed.
+    while len(self.indents) > 0:
+      self.emitToken( self.createDedent() )
+      self.indents.pop()
+
+    # Put the EOF back on the token stream.
+    self.emitToken( self.commonToken(scriptdogParser.EOF, "<EOF>") )
+
+  next = super().nextToken()
+
+  if next.channel == Token.DEFAULT_CHANNEL:
+    # Keep track of the last token on the default channel.
+    self.lastToken = next
+
+  if len( self.tokens ) == 0:
+    return next
+  else:
+    # dequeue the first item from list
+    return self.tokens.pop(0)
+
+def createDedent( self ):
+  dedent = self.commonToken( scriptdogParser.DEDENT, "" )
+  dedent.line = self.lastToken.line
+  return dedent
+
+def commonToken( self, _type, text ):
+  stop = self.getCharIndex() - 1
+  if len(text) == 0:
+    start = stop
+  else:
+    start = stop - len(text) + 1
+  return CommonToken( self._tokenFactorySourcePair, _type, self.DEFAULT_TOKEN_CHANNEL, start, stop )
+
+    
+  # Calculates the indentation of the provided spaces, taking the
+  # following rules into account:
+  #
+  # "Tabs are replaced (from left to right) by one to eight spaces
+  #  such that the total number of characters up to and including
+  #  the replacement is a multiple of eight [...]"
+  #
+  #  -- https://docs.python.org/3.1/reference/lexical_analysis.html#indentation
+def getIndentationCount( self, spaces ):
+  count = 0
+  for ch in spaces:
+    if ch == '\t':
+      count += 8 - (count % 8)
+    else:
+      # A normal space char.
+      count += 1
+
+  return count
+
+def atStartOfInput( self ):
+  return ( super().column == 0 ) and ( super().line == 1 )
+}
+
 //
 // ==================================================================
 //
@@ -13,20 +106,16 @@ A simple grammar for scriptdog.
 //
 
 program
-    : ( named_state_definition | named_utterance_definition )*
+    : ( NEWLINE | named_state_definition | named_utterance_definition )* EOF
     ;
 
 named_state_definition
-    : LST ID parameter_list? GRT LBRACE state_op_list RBRACE
+    : 'def' ID '(' parameter_list? ')' ':' NEWLINE INDENT state_op_list DEDENT
     ;
 
 named_utterance_definition
-    : LSBRACE GLOBAL? ID RSBRACE LBRACE utterance_op_list RBRACE
+    : 'def' GLOBAL? '[' ID ']' ':' NEWLINE INDENT utterance_op_list DEDENT
     ;
-
-//precompiler_directive
-//    : BANG INCLUDE filename
-//    ;
 
 // ---------------------------------------------
 
@@ -37,21 +126,21 @@ utterance_op_list :  utterance_op* ;
 // ---------------------------------------------
 
 state_op
-    : expect_statement
-    | set_statement
-    | clear_statement
-    | opt_statement
+    : expect_statement  // these are compound statements that end with dedents
+    | choice_statement
     | if_statement
-    | return_statement
-    | named_state
+    | set_statement NEWLINE // regular one-liners end with newlines
+    | clear_statement NEWLINE
+    | return_statement NEWLINE
+    | named_state NEWLINE
     ;
 
 utterance_op
-    : LSBRACE utterance_innards_list RSBRACE 
-    | LSBRACE utterance_innards_list RSBRACE LBRACE state_op_list RBRACE        
-    | LSBRACE utterance_innards_list RSBRACE RTARROW named_state
-    | LSBRACE ELSE RSBRACE RTARROW named_state
-    | LSBRACE ELSE RSBRACE LBRACE state_op_list RBRACE
+    : LSBRACE utterance_innards_list RSBRACE NEWLINE
+    | LSBRACE utterance_innards_list RSBRACE ':' NEWLINE INDENT state_op_list DEDENT
+    | LSBRACE utterance_innards_list RSBRACE RTARROW named_state NEWLINE
+    | LSBRACE ELSE RSBRACE RTARROW named_state NEWLINE
+    | LSBRACE ELSE RSBRACE ':' NEWLINE INDENT state_op_list DEDENT
     ;
 
 utterance_innards_list: utterance_innard+ ;
@@ -72,59 +161,58 @@ varref_uop: LBRACE ID RBRACE QUES?; // I don't think the QUES makes sense here..
 
 // ---------------------------------------------
 
-
 named_state
-    : NUMBER? LST ID argument_list? GRT
-    ;
-
-expect_statement
-    : NUMBER? LST EXPECT GRT LBRACE utterance_op_list RBRACE
+    : NUMBER? ID '(' argument_list? ')'
     ;
 
 set_statement
-    : NUMBER? LST BANGSET argument_list? GRT
+    : NUMBER? SETBANG '(' argument_list? ')'
     ;
 
 clear_statement
-    : NUMBER? LST BANGCLEAR ID GRT
-    ;
-
-opt_statement
-    : NUMBER? LST OPT GRT LBRACE state_op_list RBRACE
+    : NUMBER? CLEARBANG '(' ID ')'
     ;
 
 return_statement
-    :  NUMBER? LST RETURN GRT
+    : NUMBER? RETURN argument_list?
+    ;
+
+// ---------------------------------------------
+
+expect_statement
+    : NUMBER? EXPECT ':' NEWLINE INDENT utterance_op_list DEDENT
+    ;
+
+choice_statement
+    : NUMBER? CHOICE ':' NEWLINE INDENT state_op_list DEDENT
     ;
 
 if_statement
-    : NUMBER? LST IF LBRACE ID RBRACE GRT LBRACE state_op_list RBRACE elseif_statement_list? else_statement?
+    : NUMBER? IF ID ':' NEWLINE INDENT state_op_list DEDENT elseif_statement_list? else_statement?
     ;
 
 elseif_statement_list : elseif_statement+ ;
 
 elseif_statement
-    : LST ELSEIF LBRACE ID RBRACE GRT LBRACE state_op_list RBRACE
+    : ELSEIF ID ':' NEWLINE INDENT state_op_list DEDENT
     ;
         
 else_statement
-    :  LST ELSE GRT LBRACE state_op_list RBRACE
+    :  ELSE ':' NEWLINE INDENT state_op_list DEDENT
     ;
 
 // ---------------------------------------------
 
 parameter_list
-    : ( ID )+
+    : ID ( ',' ID )*
     ;
 
 argument_list
-    : ( ID | STRING | NUMBER | varref )+
+    : ( ID | STRING | NUMBER | varref ) ( ',' ( ID | STRING | NUMBER | varref ) )*
     ;
 
 varref  : LBRACE expr RBRACE ;
 expr    : ( ID | STRING | NUMBER | varref )+ ;
-
-filename : STRING;
 
 //
 // ==================================================================
@@ -185,17 +273,69 @@ BANG    : '!';
 GLOBAL  : 'global';
 EXPECT  : 'expect';
 INCLUDE : 'include';
-OPT     : 'opt';
+CHOICE  : 'choice';
 RETURN  : 'return';
-BANGSET : '!set';
-BANGCLEAR : '!clear';
+SETBANG : 'set!';
+CLEARBANG : 'clear!';
 
 IF      : 'if';
 ELSE    : 'else';
 ELSEIF  : 'elseif';
 
-TRUE    : 'true';
-FALSE   : 'false';
+TRUE    : 'True';
+FALSE   : 'False';
+
+DEF     : 'def';
+
+
+NEWLINE
+ : ( {self.atStartOfInput()}?   SPACES
+   | ( '\r'? '\n' | '\r' | '\f' ) SPACES?
+   )
+   {
+
+newLine = re.sub( "[^\r\n\f]+", "", self.text )
+spaces = re.sub( "[\r\n\f]+", "", self.text )
+
+next = self._input.LA(1)
+#print( "next = [%s]" % str(next) )
+if next == scriptdogParser.EOF:
+  chr_next = -1
+else:
+  chr_next = chr( next )
+    
+if self.opened > 0 or chr_next == '\r' or chr_next == '\n' or chr_next == '\f' or chr_next == '#':
+  # If we are inside a list or on a blank line, ignore all indents,
+  # dedents and line breaks.
+  self.skip()
+
+else:
+
+  self.emitToken( self.commonToken(scriptdogParser.NEWLINE, newLine) )
+  indent = self.getIndentationCount(spaces)
+
+  if len( self.indents ) == 0:
+      previous = 0
+  else:
+      previous = self.indents[-1]
+
+#  print( "indent=%d, previous=%d (from [%s])" % ( indent, previous, spaces ) )
+          
+  if indent == previous:
+    # skip indents of the same size as the present indent-size
+    self.skip()
+  elif indent > previous:
+    self.indents.append(indent)
+    self.emitToken( self.commonToken(scriptdogParser.INDENT, spaces) )
+  else:
+    # Possibly emit more than 1 DEDENT token.
+    while len(self.indents) > 0 and self.indents[-1] > indent:
+      self.emitToken( self.createDedent() )
+      self.indents.pop()
+
+   }
+ ;
+
 
 //
 // operators and assignments
@@ -248,6 +388,22 @@ STRING
         : '"' ( ESC_SEQ | ~('"') )* '"'  // not sure why this is a problem... |'\"'
         ;
 
+
+//
+// comments and whitespace
+//
+
+SKIP_
+ : ( SPACES | COMMENT | COMMENT2 | LINE_JOINING ) -> skip
+ ;
+
+ML_COMMENT : '/*' ( . | [\r\n\f])*? '*/' -> skip;
+
+//ML_COMMENT      : '/*' ( . | EOL )*? '*/' -> skip;
+//SL_COMMENT      : '//' ( . )*? EOL -> skip;
+//SL2_COMMENT     : '#' ( . )*? EOL -> skip;
+
+
 fragment
 EXPONENT
         : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;
@@ -275,14 +431,18 @@ UNICODE_ESC
         : '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
         ;
 
-//WS: [ \n\t\r]+ -> channel(HIDDEN);
+fragment SPACES
+ : [ \t]+
+ ;
 
-//
-// comments and whitespace
-//
+fragment COMMENT
+ : '#' ~[\r\n\f]*
+ ;
 
-ML_COMMENT      : '/*' ( . | EOL )*? '*/' -> skip;
-WS              : [ \t] -> skip;
-EOL             : [\r\n] -> skip;
-SL_COMMENT      : '//' ( . )*? EOL -> skip;
-SL2_COMMENT     : '#' ( . )*? EOL -> skip;
+fragment COMMENT2
+ : '//' ~[\r\n\f]*
+ ;
+
+fragment LINE_JOINING
+ : '\\' SPACES? ( '\r'? '\n' | '\r' | '\f')
+ ;
